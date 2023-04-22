@@ -1,14 +1,20 @@
 
 import MainScene from "./MainScene.js";
+import NextScene from "./NextScene.js";
+
+const myCustomCanvas = document.createElement('canvas');
+
+myCustomCanvas.id = 'myCustomCanvas';
+document.body.appendChild(myCustomCanvas);
 
 // Configure game scene
 const config = {
     width: 512,
     height: 256,
-    backgroundColor: '#123456',
-    type: Phaser.AUTO,
+    canvas: document.getElementById('myCustomCanvas'),
+    type: Phaser.CANVAS,
     parent: 'survival-game',
-    scene: [MainScene],
+    scene: [MainScene, NextScene],
     scale: {
         zoom: 2,
     },
@@ -25,14 +31,22 @@ const config = {
             plugin: PhaserMatterCollisionPlugin.default, // The plugin class
             key: "matterCollision", // Where to store in Scene.Systems, e.g. scene.sys.matterCollision
             mapping: "matterCollision" // Where to store in the Scene, e.g. scene.matterCollision
-    
-            // Note! If you are including the library via the CDN script tag, the plugin 
-            // line should be:
-            // plugin: PhaserMatterCollisionPlugin.default
             }
         ]
     }
 }
 
 // Create new game
-new Phaser.Game(config);
+var game = new Phaser.Game(config);
+
+function preload(){
+    console.log("game-preload");
+}
+
+function create(){
+    console.log("game-create");
+}
+
+function update(){
+    console.log("game-update");
+}

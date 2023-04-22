@@ -1,12 +1,17 @@
 export default class Player extends Phaser.Physics.Matter.Sprite {
-
     constructor(data){
         let {scene, x, y, texture, frame} = data;
         super(scene.matter.world, x ,y, texture, frame);
         this.scene.add.existing(this);
 
         const {Body, Bodies} = Phaser.Physics.Matter.Matter;
-        //var playerCollider = Bodies.circle()
+        var playerCollider = Bodies.circle(this.x, this.y, 12, {isSensor: false, label: 'playerCollision'});
+        var playerSensor = Bodies.circle(this.x, this.y, 24,{isSensor: true, label: 'playerSensor'});
+        const compoundBody = Body.create({
+            parts:[playerCollider, playerSensor],
+            frictionAir: 0.35,
+        })
+        this.setExistingBody(compoundBody);
     }
 
     static create(scene){ 
@@ -19,10 +24,31 @@ export default class Player extends Phaser.Physics.Matter.Sprite {
             attack: Phaser.Input.Keyboard.KeyCodes.F,
             jump: Phaser.Input.Keyboard.KeyCodes.SPACE,
         })
+
+        const sprite = scene.add.sprite(this.x, this.y).setInteractive();
+        sprite.on('pointerdown', function (pointer)
+        {
+
+            this.setTint(0xff0000);
+
+        });
+
+        sprite.on('pointerout', function (pointer)
+        {
+
+            this.clearTint();
+
+        });
+
+        sprite.on('pointerup', function (pointer)
+        {
+
+            this.clearTint();
+
+        });
     }
 
     update(){
-        console.log("Player update");
         this.playerMove(2.5);
         
     }
@@ -48,7 +74,6 @@ export default class Player extends Phaser.Physics.Matter.Sprite {
         playerVelocity.normalize();
         playerVelocity.scale(speed);
         this.setVelocity(playerVelocity.x, 0);
-        
     }
 }
 
