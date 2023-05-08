@@ -1,0 +1,28 @@
+{
+    "anims": [
+        {
+            "key": "thief_run",
+            "type": "frames",
+            "repeat": -1,
+            "frameRate": 12,
+            "frames": [
+                {
+                    "key": "thief",
+                    "frame": "mob_thief_002_1x11_0"
+                },
+                {
+                    "key": "thief",
+                    "frame": "mob_thief_002_1x11_2"
+                },
+                {
+                    "key": "thief",
+                    "frame": "mob_thief_002_1x11_1"
+                },
+                {
+                    "key": "thief",
+                    "frame": "mob_thief_002_1x11_3"
+                }
+            ]
+        }
+    ]
+}

@@ -5,7 +5,7 @@ import Level1 from "./Level1.js";
 var config = {
     type: Phaser.AUTO,
     parent: 'td-game',
-    width: 640,
+    width: 1024,
     height: 512,   
 
     scene: [GamePlayScene],

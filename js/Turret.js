@@ -1,15 +1,15 @@
-export default class Turret extends Phaser.GameObjects.Image {
+export default class Turret extends Phaser.GameObjects.Sprite {
     atkRange;
     atkDamage;
     constructor(scene){
-        super(scene, 0, 0, 'sprites', 'turret');
+        super(scene, 0, 0);
         Phaser.GameObjects.Image.call(this, scene, 0, 0, 'sprites', 'turret');
         this.nextTic = 0;
     }
 
     place(i, j, scene){
-        this.y = i * 64 + 64/2;
-        this.x = j * 64 + 64/2;
+        this.y = i * scene.tileSize + scene.tileSize/2;
+        this.x = j * scene.tileSize + scene.tileSize/2;
         scene.map[i][j] = 1;  
     }
 
