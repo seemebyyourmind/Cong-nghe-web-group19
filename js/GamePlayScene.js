@@ -1,17 +1,21 @@
 import Enemy from "./Enemy.js";
 import Turret from "./Turret.js";
 import Bullet from "./Bullet.js";
+import Map from "./Map.js";
 
+
+const turrets = [];
 export default class GamePlayScene extends Phaser.Scene{
     path;
     graphics;
     enemies;
-    turrets;
+    turrets = new Array();
     bullets;
     tileSize;
 
     constructor(){
         super("gamePlayScene");
+
     }
 
     preload() {
@@ -24,6 +28,7 @@ export default class GamePlayScene extends Phaser.Scene{
     create() {
         // this graphics element is only for visualization, 
         // its not related to our path
+
         this.add.image(512, 256, 'bg1');
 
         this.graphics = this.add.graphics();    
@@ -39,14 +44,6 @@ export default class GamePlayScene extends Phaser.Scene{
         
         this.graphics.lineStyle(3, 0xffffff, 1);
         this.tileSize = 32;
-    
-        //this.enemies = this.physics.add.group({ classType: Enemy, runChildUpdate: true });
-        
-        //Add turrets pool
-        // this.turrets = this.physics.add.group();
-        // var turret = new Turret(this);
-        // turret.active = false;
-        // this.turrets.add(turret);
 
         // visualize the path
         this.path.draw(this.graphics);
@@ -55,15 +52,16 @@ export default class GamePlayScene extends Phaser.Scene{
 
         this.enemies = this.physics.add.group({classType: Enemy, runChildUpdate: true});
 
-        this.turrets = this.physics.add.group({classType: Turret, runChildUpdate: true});
+        this.turrets = new Array();
 
         this.bullets = this.physics.add.group({classType: Bullet, runChildUpdate: true});
 
         //this.add.overlap(this.enemies, this.bullets, this.damageEnemy);
     
-        //this.input.on('pointerdown', this.placeTurret);
+        this.input.on('pointerdown', this.placeTurret);
 
         this.drawLines(this.graphics);
+
     }
      
     update(time, delta) {  
@@ -78,7 +76,12 @@ export default class GamePlayScene extends Phaser.Scene{
                 enemy.startOnPath();
 
                 this.nextEnemy = time + 1000;
-            }       
+            }   
+        }
+
+        for (var i = 0; i < turrets.length; i++){
+            this.add.existing(turrets[i]);
+            turrets[i].update(time, delta);
         }
     }
 
@@ -95,34 +98,23 @@ export default class GamePlayScene extends Phaser.Scene{
     }
 
     placeTurret(pointer) {
-        var map = [ [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-                    [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-                    [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-                    [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-                    [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-                    [ 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-                    [ 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-                    [ 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-                    [ 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-                    [ 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-                    [ 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
-                    [ 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-                    [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-                    [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-                    [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-                    [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]];
 
         var i = Math.floor(pointer.y/32);
         var j = Math.floor(pointer.x/32);
 
-        if(map[i][j] === 0) {
-            var turret = new Turret(this);
+
+        if(Map.Level1Map[i][j] === 2) {
+            var turret = new Turret(this.scene);
             if (turret)
             {
+                turrets.push(turret);
+                console.log(turrets.length);
+                
                 turret.setActive(true);
                 turret.setVisible(true);
-                turret.place(i, j, this);
-            }   
+                turret.place(i, j);
+                
+            }  
         }
     }
 
