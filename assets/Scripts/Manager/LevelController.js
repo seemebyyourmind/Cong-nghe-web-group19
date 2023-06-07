@@ -31,11 +31,11 @@ var LevelController = cc.Class({
     
     
     onLoad() {
-        LevelController.instance = this;
+        LevelController.instance = this;       
     },
 
     start () {
-        this.loadLevel(0);
+        this.startLevel();
     },
 
 
@@ -44,6 +44,10 @@ var LevelController = cc.Class({
     loadLevel(index){
         this.curLevel = cc.instantiate(this.levelList[index]);
         this.curLevel.parent = this.node;
+    },
+
+    startLevel(){
+        this.loadLevel(this.curLvIndex);
     },
 
     replay(){

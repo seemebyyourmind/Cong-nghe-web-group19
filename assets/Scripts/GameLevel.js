@@ -5,7 +5,7 @@
 // Learn life-cycle callbacks:
 //  - https://docs.cocos.com/creator/manual/en/scripting/life-cycle-callbacks.html
 import { instance } from "PoolManager";
-
+import Hero from "Hero";
 var GameLevel = cc.Class({
     extends: cc.Component,
 
@@ -13,7 +13,9 @@ var GameLevel = cc.Class({
         pathList: {
             default: [],
             type: cc.Node
-        }
+        },
+
+        heroList: [cc.Prefab],
         
     },
 

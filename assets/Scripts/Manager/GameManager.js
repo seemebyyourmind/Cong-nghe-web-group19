@@ -19,12 +19,12 @@ var GameManager = new cc.Class({
     },
     
     onLoad: function() {
+        cc.game.addPersistRootNode(this.node);
         GameManager.instance = this;
+        
     },
 
     start () {
 
     },
-
-    // update (dt) {},
 });

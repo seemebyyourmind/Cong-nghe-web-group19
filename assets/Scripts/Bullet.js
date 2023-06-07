@@ -17,8 +17,8 @@ var Bullet = cc.Class({
 
     // LIFE-CYCLE CALLBACKS:
 
-    onInit(turret, target){
-        this.node.position = turret.node.position;
+    onInit(turretNode, target){
+        this.node.position = turretNode.position;
         this.target = target;
     },
     // onLoad () {},

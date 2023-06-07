@@ -1,4 +1,4 @@
-// Learn cc.Class:
+/// Learn cc.Class:
 //  - https://docs.cocos.com/creator/manual/en/scripting/class.html
 // Learn Attribute:
 //  - https://docs.cocos.com/creator/manual/en/scripting/reference/attributes.html
@@ -59,7 +59,6 @@ var Enemy = cc.Class({
     },
 
     onDespawn(){
-        PoolManager.instance.deSpawnEnemy(this.node);
-
+        this.node.destroy();
     }
 });

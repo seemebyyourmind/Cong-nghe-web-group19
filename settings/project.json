@@ -3,7 +3,8 @@
     "default",
     "Enemy",
     "Turret",
-    "Bullet"
+    "Bullet",
+    "Hero"
   ],
   "collision-matrix": [
     [
@@ -12,17 +13,25 @@
     [
       false,
       false,
+      false,
       true,
       true
     ],
     [
       false,
-      true,
+      false,
       false
     ],
     [
       false,
       true,
+      false,
+      false
+    ],
+    [
+      false,
+      true,
+      false,
       false,
       false
     ]

@@ -52,6 +52,7 @@ var PoolManager = cc.Class({
 
     deSpawnEnemy(enemy){
         this.enemyPool.put(enemy);
+        console.log(enemy.parent);
     },
 
     spawnBullet(turret, target){
@@ -66,6 +67,7 @@ var PoolManager = cc.Class({
     },
 
     deSpawnBullet(bullet){
+        
         this.bulletPool.put(bullet);
     }
 
