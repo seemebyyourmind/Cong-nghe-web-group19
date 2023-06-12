@@ -4,12 +4,13 @@
 //  - https://docs.cocos.com/creator/manual/en/scripting/reference/attributes.html
 // Learn life-cycle callbacks:
 //  - https://docs.cocos.com/creator/manual/en/scripting/life-cycle-callbacks.html
+import Hero from 'Hero';
 
 var GameManager = new cc.Class({
     extends: cc.Component,
 
     properties: {
-
+        heroList: [Hero],
     },
 
     // LIFE-CYCLE CALLBACKS:

@@ -1,5 +1,6 @@
 
 import LevelController from 'LevelController';
+import UIManager from 'UIManager';
 
 cc.Class({
     extends: cc.Component,
@@ -18,5 +19,10 @@ cc.Class({
 
     clickPlay(){
         cc.director.loadScene('GameplayScene');
+        UIManager.instance.openUIGameplay();
+    },
+
+    clickHero(){
+        UIManager.instance.openUIHeroDetail();
     }
 });
