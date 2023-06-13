@@ -2,14 +2,21 @@
 
 import PoolManager from "PoolManager";
 
-var Hero = cc.Class({
+const Hero = cc.Class({
     extends: cc.Component,
 
     properties: {
+        physicDMG: cc.Float,
+        magicDMG: cc.Float,
+        attackSPD: cc.Float,
+        skill: cc.Prefab,
+
         targetList: [cc.Node],
         atkCD: 0,
+        skillCD: 5,
         anim: cc.Animation,
         avatar: cc.SpriteFrame,
+        bulletPrefab: cc.Prefab,
     },
 
     // LIFE-CYCLE CALLBACKS:
@@ -18,7 +25,6 @@ var Hero = cc.Class({
     },
 
     onload(){
-        const [idleClip, atkClip] = this.anim.clips;
         this.idleState = this.anim.getState(idleClip.name);
         this.atkState = this.anim.getState(atkClip.name);
     },
@@ -26,42 +32,81 @@ var Hero = cc.Class({
     start () {
         var manager = cc.director.getCollisionManager();
         manager.enabled = true;
-        manager.enabledDebugDraw = true;
+        this.atkCD = 1 / this.attackSPD;
+        //manager.enabledDebugDraw = true;
     },
 
     update (dt) {
         if (this.atkCD <= 0){
             if (this.getTarget() != null){
                 this.attack(this.getTarget());
-                this.atkCD = 2;
+                this.atkCD = 1 / this.attackSPD;
             }
         }else{
             this.atkCD -= dt;
+        }    
+    },
+
+    onCollisionEnter(other, self) {
+        // Add enemy to the array when it enters the attack range
+        const enemy = other.node;
+        if (enemy && enemy.group === 'Enemy') {
+          this.targetList.push(enemy);
         }
     },
 
-    onCollisionEnter: function (other, self) {
-        this.targetList.push(other.node);
+    onCollisionExit(other, self) {
+        // Remove enemy from the array when it exits the attack range
+        const enemy = other.node;
+        if (enemy && enemy.group === 'Enemy') {
+            this.removeTarget(enemy);
+        }
     },
 
     attack(target){
-        this.anim.play('Archer_attack');
+        const clips = this.anim.getClips();
+        this.anim.play(clips[1].name); // 1 is attack
+        this.anim.currentClip.speed = this.attackSPD;
+
         this.target = target;
+        const currentScale = this.node.scaleX;
+        if (this.target.position.x < this.node.parent.position.x){
+            this.node.setScale(-Math.abs(currentScale), this.node.scaleY);
+        }else{
+            this.node.setScale(Math.abs(currentScale), this.node.scaleY);
+        }
     },
 
+
     spawnBullet(){
-        PoolManager.instance.spawnBullet(this.node.parent, this.target);
-        this.anim.play('Archer_idle');
+        const bullet = cc.instantiate(this.bulletPrefab);
+        const parentNode = cc.director.getScene();
+        bullet.setParent(parentNode);
+        bullet.getComponent('Bullet').onInit(this.node.parent, this.target, this.physicDMG + this.magicDMG);
+    },
+
+    resetIdle(){
+        const clips = this.anim.getClips();
+        this.anim.play(clips[0].name); // 0 is idle
     },
 
     getTarget(){
-
         for (var i = this.targetList.length - 1; i >= 0; i--){
             if (this.targetList[i].position.sub(this.node.parent.position).mag() < 150 && this.targetList[i] != null){
                 return this.targetList[i];
-            }else{
-                this.targetList.pop();
             }
+
+            if (!this.targetList[i].isValid){
+                this.removeTarget(this.targetList[i]);
+            }
+        }
+        return null;
+    },
+
+    removeTarget(enemy) {
+        const index = this.targetList.indexOf(enemy);
+        if (index > -1) {
+          this.targetList.splice(index, 1);
         }
     },
 });

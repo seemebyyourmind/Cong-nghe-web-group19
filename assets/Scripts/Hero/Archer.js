@@ -1,24 +1,10 @@
 
-
+import Hero from 'Hero';
 cc.Class({
-    extends: cc.Component,
+    extends: Hero,
 
     properties: {
-        // foo: {
-        //     // ATTRIBUTES:
-        //     default: null,        // The default value will be used only when the component attaching
-        //                           // to a node for the first time
-        //     type: cc.SpriteFrame, // optional, default is typeof default
-        //     serializable: true,   // optional, default is true
-        // },
-        // bar: {
-        //     get () {
-        //         return this._bar;
-        //     },
-        //     set (value) {
-        //         this._bar = value;
-        //     }
-        // },
+
     },
 
     // LIFE-CYCLE CALLBACKS:
@@ -29,5 +15,23 @@ cc.Class({
 
     },
 
-    // update (dt) {},
+    update (dt) {
+        this._super(dt);
+        
+        if (this.skillCD <= 0){
+            if (this.getTarget() != null){
+                this.castSkill(this.getTarget());
+                this.skillCD = 5;
+            }
+        }else{
+            this.skillCD -= dt;
+        }
+    },
+
+    castSkill(target){
+        const skill = cc.instantiate(this.skill);
+        const parentNode = cc.director.getScene();
+        skill.setParent(parentNode);
+        skill.position = cc.v2(target.position.x, target.position.y);
+    },
 });

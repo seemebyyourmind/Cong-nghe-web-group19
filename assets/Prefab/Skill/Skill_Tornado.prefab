@@ -27,42 +27,45 @@
       },
       {
         "__id__": 4
+      },
+      {
+        "__id__": 5
       }
     ],
     "_prefab": {
-      "__id__": 5
+      "__id__": 6
     },
     "_opacity": 255,
     "_color": {
       "__type__": "cc.Color",
-      "r": 255,
-      "g": 255,
-      "b": 255,
+      "r": 221,
+      "g": 82,
+      "b": 70,
       "a": 255
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 242,
+      "width": 163,
       "height": 160
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
       "x": 0.5,
-      "y": 0.5
+      "y": 0.1
     },
     "_trs": {
       "__type__": "TypedArray",
       "ctor": "Float64Array",
       "array": [
-        -189.231,
-        74,
+        528.316,
+        293.379,
         0,
         0,
         0,
         0,
         1,
-        1,
-        1,
+        0.4,
+        0.4,
         1
       ]
     },
@@ -75,8 +78,8 @@
     "_skewX": 0,
     "_skewY": 0,
     "_is3DNode": false,
-    "_groupIndex": 0,
-    "groupIndex": 0,
+    "_groupIndex": 5,
+    "groupIndex": 5,
     "_id": ""
   },
   {
@@ -95,7 +98,7 @@
         "__uuid__": "ccd1524b-ff73-4b00-9b19-26d0c3ab7247"
       }
     ],
-    "playOnLoad": false,
+    "playOnLoad": true,
     "_id": ""
   },
   {
@@ -114,10 +117,10 @@
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
     "_spriteFrame": {
-      "__uuid__": "e8be94e5-a729-43d3-90d5-413ed7475645"
+      "__uuid__": "c37ee4c4-5992-4869-90f3-174edd7333a5"
     },
     "_type": 0,
-    "_sizeMode": 1,
+    "_sizeMode": 0,
     "_fillType": 0,
     "_fillCenter": {
       "__type__": "cc.Vec2",
@@ -142,13 +145,29 @@
     "_offset": {
       "__type__": "cc.Vec2",
       "x": 0,
-      "y": 0
+      "y": 63.2
     },
     "_size": {
       "__type__": "cc.Size",
-      "width": 242,
-      "height": 160
+      "width": 140.8,
+      "height": 158.9
     },
+    "_id": ""
+  },
+  {
+    "__type__": "190c8OTCDtAzKn6T3JSr4b1",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 1
+    },
+    "_enabled": true,
+    "skillImg": {
+      "__uuid__": "36a0ba10-b574-4f73-9950-ba805a2df431"
+    },
+    "skillDescription": "Summon a fire tornado in 3s, deal 100% PhysicDMG per second to enemies",
+    "skillDuration": 3,
+    "skillDmg": 200,
     "_id": ""
   },
   {

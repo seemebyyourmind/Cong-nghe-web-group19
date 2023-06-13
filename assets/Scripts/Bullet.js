@@ -17,9 +17,10 @@ var Bullet = cc.Class({
 
     // LIFE-CYCLE CALLBACKS:
 
-    onInit(turretNode, target){
+    onInit(turretNode, target, dmg){
         this.node.position = turretNode.position;
         this.target = target;
+        this.damage = dmg;
     },
     // onLoad () {},
 
@@ -28,14 +29,19 @@ var Bullet = cc.Class({
     },
 
     update (dt) {
+        if (!this.target.isValid){
+            this.node.destroy();
+        }
         var distance = this.target.position.sub(this.node.position);
         var direct = distance.normalize().mulSelf(this.speed);
 
         this.node.position = cc.v2(this.node.position.x + direct.x, this.node.position.y + direct.y);
+        const angle = cc.v2(0, 1).signAngle(distance.normalize()) * cc.macro.RAD_TO_DEG;
+        this.node.lookAt(this.target.position);
     },
 
     onCollisionEnter: function (other, self) {
         other.getComponent('Enemy').getDamage(this.damage);
-        PoolManager.instance.deSpawnBullet(this.node);
+        this.node.destroy();
     },
 });

@@ -4,7 +4,8 @@
     "Enemy",
     "Turret",
     "Bullet",
-    "Hero"
+    "Hero",
+    "Skill"
   ],
   "collision-matrix": [
     [
@@ -15,6 +16,7 @@
       false,
       false,
       true,
+      true,
       true
     ],
     [
@@ -31,6 +33,14 @@
     [
       false,
       true,
+      false,
+      false,
+      false
+    ],
+    [
+      false,
+      true,
+      false,
       false,
       false,
       false

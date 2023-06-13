@@ -6,7 +6,6 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
-        heroPrefab: [cc.Prefab],
         isPlaced: cc.Boolean,
         heroPanel: cc.Node,
         heroLabel: [cc.Node],
@@ -17,9 +16,6 @@ cc.Class({
     onLoad () {
         this.node.on(cc.Node.EventType.TOUCH_START,this.showHeroPanel,this);
 
-        // for (var i = 0; i < this.heroLabel.length(); i++){
-        //     this.heroLabel[i].
-        // }
         this.heroLabel.forEach((sprite, index) => {
             sprite.on(cc.Node.EventType.TOUCH_END, () => {
                 this.spawnHero(index);
@@ -30,7 +26,8 @@ cc.Class({
 
     spawnHero(index){
         if (this.isPlaced == false){
-            let hero = cc.instantiate(this.heroPrefab[index]);
+            const heroList = LevelController.instance.curLevel.getComponent('GameLevel').heroList;
+            let hero = cc.instantiate(heroList[index]);
             hero.parent = this.node;
             hero.getComponent("Hero").onSpawn();
             this.isPlaced = true;
@@ -40,9 +37,7 @@ cc.Class({
     },
 
     start () {
-        var manager = cc.director.getCollisionManager();
-        manager.enabled = true;
-        manager.enabledDebugDraw = true;
+        
     },
 
     showHeroPanel(){
@@ -50,6 +45,7 @@ cc.Class({
         for (var i = 0; i < heroList.length; i++){
             const newHero = cc.instantiate(heroList[i]);
             var sprite = newHero.getComponent('Hero').avatar;
+            this.heroLabel[i].active = true;
             this.heroLabel[i].getComponent(cc.Sprite).spriteFrame = sprite;
         }
         this.heroPanel.active = true;

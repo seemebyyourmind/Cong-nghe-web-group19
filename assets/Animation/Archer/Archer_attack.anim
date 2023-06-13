@@ -56,6 +56,11 @@
       "frame": 0.3333333333333333,
       "func": "spawnBullet",
       "params": []
+    },
+    {
+      "frame": 0.3333333333333333,
+      "func": "resetIdle",
+      "params": []
     }
   ]
 }

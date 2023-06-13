@@ -50,7 +50,7 @@
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
-      "x": 0.5,
+      "x": 0.4,
       "y": 0.5
     },
     "_trs": {
@@ -127,31 +127,13 @@
     },
     "_clips": [
       {
-        "__uuid__": "22f2722e-21eb-4f7d-ae4e-7fbddfafd234"
+        "__uuid__": "a5ad2721-5db3-49c1-81ff-663ea8a45761"
       },
       {
-        "__uuid__": "a5ad2721-5db3-49c1-81ff-663ea8a45761"
+        "__uuid__": "22f2722e-21eb-4f7d-ae4e-7fbddfafd234"
       }
     ],
     "playOnLoad": true,
-    "_id": ""
-  },
-  {
-    "__type__": "97f2e9txeZJhaffaffrZq5o",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 1
-    },
-    "_enabled": true,
-    "targetList": [],
-    "atkCD": 2,
-    "anim": {
-      "__id__": 3
-    },
-    "avatar": {
-      "__uuid__": "9ab9a87d-b371-4b9e-af38-bdd1879434f8"
-    },
     "_id": ""
   },
   {
@@ -168,7 +150,35 @@
       "x": 0,
       "y": 0
     },
-    "_radius": 150,
+    "_radius": 200,
+    "_id": ""
+  },
+  {
+    "__type__": "a3e83s2grdF3aKuJK4cM/2c",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 1
+    },
+    "_enabled": true,
+    "physicDMG": 100,
+    "magicDMG": 0,
+    "attackSPD": 1,
+    "skill": {
+      "__uuid__": "54168a85-dc3d-49d8-bd2e-f8fa7620c1d5"
+    },
+    "targetList": [],
+    "atkCD": 2,
+    "skillCD": 5,
+    "anim": {
+      "__id__": 3
+    },
+    "avatar": {
+      "__uuid__": "9ab9a87d-b371-4b9e-af38-bdd1879434f8"
+    },
+    "bulletPrefab": {
+      "__uuid__": "f15df1fe-afa3-4ed9-abae-0dce59854f8e"
+    },
     "_id": ""
   },
   {

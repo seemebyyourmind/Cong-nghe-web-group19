@@ -33,7 +33,8 @@ var Enemy = cc.Class({
     },
 
     start () {
-
+        var manager = cc.director.getCollisionManager();
+        manager.enabled = true;
     },
 
     update (dt) {

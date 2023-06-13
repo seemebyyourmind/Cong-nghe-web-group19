@@ -871,7 +871,7 @@
       "__id__": 20
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_components": [
       {
         "__id__": 22
@@ -978,7 +978,7 @@
       "__id__": 20
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_components": [
       {
         "__id__": 25
@@ -1085,7 +1085,7 @@
       "__id__": 20
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_components": [
       {
         "__id__": 28
@@ -1192,7 +1192,7 @@
       "__id__": 20
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_components": [
       {
         "__id__": 31
@@ -1299,7 +1299,7 @@
       "__id__": 20
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_components": [
       {
         "__id__": 34
@@ -1481,11 +1481,6 @@
       "__id__": 19
     },
     "_enabled": true,
-    "heroPrefab": [
-      {
-        "__uuid__": "d59a9478-9acc-4cd8-9ee4-1ee14d132024"
-      }
-    ],
     "isPlaced": false,
     "heroPanel": {
       "__id__": 20
@@ -1679,7 +1674,7 @@
       "__id__": 42
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_components": [
       {
         "__id__": 44
@@ -1786,7 +1781,7 @@
       "__id__": 42
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_components": [
       {
         "__id__": 47
@@ -1893,7 +1888,7 @@
       "__id__": 42
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_components": [
       {
         "__id__": 50
@@ -2000,7 +1995,7 @@
       "__id__": 42
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_components": [
       {
         "__id__": 53
@@ -2107,7 +2102,7 @@
       "__id__": 42
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_components": [
       {
         "__id__": 56
@@ -2289,11 +2284,6 @@
       "__id__": 41
     },
     "_enabled": true,
-    "heroPrefab": [
-      {
-        "__uuid__": "d59a9478-9acc-4cd8-9ee4-1ee14d132024"
-      }
-    ],
     "isPlaced": false,
     "heroPanel": {
       "__id__": 42
@@ -2487,7 +2477,7 @@
       "__id__": 64
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_components": [
       {
         "__id__": 66
@@ -2594,7 +2584,7 @@
       "__id__": 64
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_components": [
       {
         "__id__": 69
@@ -2701,7 +2691,7 @@
       "__id__": 64
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_components": [
       {
         "__id__": 72
@@ -2808,7 +2798,7 @@
       "__id__": 64
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_components": [
       {
         "__id__": 75
@@ -2915,7 +2905,7 @@
       "__id__": 64
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_components": [
       {
         "__id__": 78
@@ -3097,11 +3087,6 @@
       "__id__": 63
     },
     "_enabled": true,
-    "heroPrefab": [
-      {
-        "__uuid__": "d59a9478-9acc-4cd8-9ee4-1ee14d132024"
-      }
-    ],
     "isPlaced": false,
     "heroPanel": {
       "__id__": 64
@@ -3167,6 +3152,9 @@
     "heroList": [
       {
         "__uuid__": "d59a9478-9acc-4cd8-9ee4-1ee14d132024"
+      },
+      {
+        "__uuid__": "77d64adc-7ea6-4be4-8744-c3b450921ff8"
       }
     ],
     "_id": ""
