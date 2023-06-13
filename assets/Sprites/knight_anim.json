@@ -1,0 +1,140 @@
+{
+    "anims": [
+        {
+            "key": "attack",
+            "type": "frames",
+            "repeat": 1,
+            "frameRate": 10,
+            "frames": [
+                {
+                    "key": "knight",
+                    "frame": "attack_1_0"
+                },
+                {
+                    "key": "knight",
+                    "frame": "attack_1_1"
+                },
+                {
+                    "key": "knight",
+                    "frame": "attack_1_2"
+                },
+                {
+                    "key": "knight",
+                    "frame": "attack_1_3"
+                },
+                {
+                    "key": "knight",
+                    "frame": "attack_1_4"
+                }
+            ]
+        },
+        {
+            "key": "run",
+            "type": "frames",
+            "repeat": -1,
+            "frameRate": 10,
+            "frames": [
+                {
+                    "key": "knight",
+                    "frame": "run_0"
+                },
+                {
+                    "key": "knight",
+                    "frame": "run_1"
+                },
+                {
+                    "key": "knight",
+                    "frame": "run_2"
+                },
+                {
+                    "key": "knight",
+                    "frame": "run_3"
+                },
+                {
+                    "key": "knight",
+                    "frame": "run_4"
+                },
+                {
+                    "key": "knight",
+                    "frame": "run_5"
+                },
+                {
+                    "key": "knight",
+                    "frame": "run_6"
+                }
+            ]
+        },
+        {
+            "key": "walk",
+            "type": "frames",
+            "repeat": -1,
+            "frameRate": 10,
+            "frames": [
+                {
+                    "key": "knight",
+                    "frame": "walk_0"
+                },
+                {
+                    "key": "knight",
+                    "frame": "walk_1"
+                },
+                {
+                    "key": "knight",
+                    "frame": "walk_2"
+                },
+                {
+                    "key": "knight",
+                    "frame": "walk_3"
+                },
+                {
+                    "key": "knight",
+                    "frame": "walk_4"
+                },
+                {
+                    "key": "knight",
+                    "frame": "walk_5"
+                },
+                {
+                    "key": "knight",
+                    "frame": "walk_6"
+                },
+                {
+                    "key": "knight",
+                    "frame": "walk_7"
+                }
+            ]
+        },
+        {
+            "key": "idle",
+            "type": "frames",
+            "repeat": 0,
+            "frameRate": 12,
+            "frames": [
+                {
+                    "key": "knight",
+                    "frame": "idle_0"
+                },
+                {
+                    "key": "knight",
+                    "frame": "idle_1"
+                },
+                {
+                    "key": "knight",
+                    "frame": "idle_2"
+                },
+                {
+                    "key": "knight",
+                    "frame": "idle_3"
+                },
+                {
+                    "key": "knight",
+                    "frame": "idle_4"
+                },
+                {
+                    "key": "knight",
+                    "frame": "idle_5"
+                }
+            ]
+        }
+    ]
+}
