@@ -1,0 +1,49 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "swordman_walk",
+  "_objFlags": 0,
+  "_native": "",
+  "_duration": 0.35,
+  "sample": 60,
+  "speed": 1,
+  "wrapMode": 2,
+  "curveData": {
+    "comps": {
+      "cc.Sprite": {
+        "spriteFrame": [
+          {
+            "frame": 0,
+            "value": {
+              "__uuid__": "1e931db1-e479-4b5b-b16c-07cc9a906e4d"
+            }
+          },
+          {
+            "frame": 0.08333333333333333,
+            "value": {
+              "__uuid__": "50f54bf0-1565-4e9d-9684-da6b18d538e7"
+            }
+          },
+          {
+            "frame": 0.16666666666666666,
+            "value": {
+              "__uuid__": "455fd132-312f-4208-a10c-0c3532f2d753"
+            }
+          },
+          {
+            "frame": 0.25,
+            "value": {
+              "__uuid__": "b66abf89-c712-4b7b-bf7d-6c05958362af"
+            }
+          },
+          {
+            "frame": 0.3333333333333333,
+            "value": {
+              "__uuid__": "dd62503c-3d8a-4660-9ce4-092a75f68985"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "events": []
+}

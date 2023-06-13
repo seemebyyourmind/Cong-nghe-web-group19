@@ -1,0 +1,55 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "princes_attack",
+  "_objFlags": 0,
+  "_native": "",
+  "_duration": 0.43333333333333335,
+  "sample": 60,
+  "speed": 1,
+  "wrapMode": 2,
+  "curveData": {
+    "comps": {
+      "cc.Sprite": {
+        "spriteFrame": [
+          {
+            "frame": 0,
+            "value": {
+              "__uuid__": "a97100ec-3a60-4b2b-b592-ef9b6ca4a59a"
+            }
+          },
+          {
+            "frame": 0.08333333333333333,
+            "value": {
+              "__uuid__": "6b735f35-2c96-421a-8ed4-6d9299aa3732"
+            }
+          },
+          {
+            "frame": 0.16666666666666666,
+            "value": {
+              "__uuid__": "6559ce9d-c781-4b75-a6c6-519a6a5310e5"
+            }
+          },
+          {
+            "frame": 0.25,
+            "value": {
+              "__uuid__": "6c89aa89-1c7b-477c-91d8-77cc8606a92b"
+            }
+          },
+          {
+            "frame": 0.3333333333333333,
+            "value": {
+              "__uuid__": "c7ede20e-ff8b-47e5-adb6-da9497fe5621"
+            }
+          },
+          {
+            "frame": 0.4166666666666667,
+            "value": {
+              "__uuid__": "a97100ec-3a60-4b2b-b592-ef9b6ca4a59a"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "events": []
+}
