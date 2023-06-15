@@ -14,8 +14,6 @@ var GameLevel = cc.Class({
             default: [],
             type: cc.Node
         },
-
-        heroList: [cc.Prefab],
         
     },
 

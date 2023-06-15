@@ -1,18 +1,15 @@
-// Learn cc.Class:
-//  - https://docs.cocos.com/creator/manual/en/scripting/class.html
-// Learn Attribute:
-//  - https://docs.cocos.com/creator/manual/en/scripting/reference/attributes.html
-// Learn life-cycle callbacks:
-//  - https://docs.cocos.com/creator/manual/en/scripting/life-cycle-callbacks.html
+
 import PoolManager from "PoolManager";
 
-var Bullet = cc.Class({
+const Bullet = cc.Class({
     extends: cc.Component,
 
     properties: {
         damage: 10,
         speed: 1,
         target: cc.Node,
+        isSetFreeze: false,
+        freezeTime: 0,
     },
 
     // LIFE-CYCLE CALLBACKS:
@@ -25,7 +22,8 @@ var Bullet = cc.Class({
     // onLoad () {},
 
     start () {
-
+        var manager = cc.director.getCollisionManager();
+        manager.enabled = true;
     },
 
     update (dt) {
@@ -40,7 +38,10 @@ var Bullet = cc.Class({
         this.node.lookAt(this.target.position);
     },
 
-    onCollisionEnter: function (other, self) {
+    onCollisionEnter: function (other, self) {   
+        if (this.isSetFreeze){
+            other.getComponent('Enemy').setFreeze(this.freezeTime);
+        }
         other.getComponent('Enemy').getDamage(this.damage);
         this.node.destroy();
     },

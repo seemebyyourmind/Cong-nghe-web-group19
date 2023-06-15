@@ -1,0 +1,66 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "Spirit_attack",
+  "_objFlags": 0,
+  "_native": "",
+  "_duration": 1.35,
+  "sample": 60,
+  "speed": 1,
+  "wrapMode": 1,
+  "curveData": {
+    "comps": {
+      "cc.Sprite": {
+        "spriteFrame": [
+          {
+            "frame": 0,
+            "value": {
+              "__uuid__": "8d80acfa-682a-4e0b-a3b1-ab0defd0cba5"
+            }
+          },
+          {
+            "frame": 0.26666666666666666,
+            "value": {
+              "__uuid__": "a53631c4-3ab7-46d5-bb61-20ba0c0d4e82"
+            }
+          },
+          {
+            "frame": 0.5,
+            "value": {
+              "__uuid__": "1e455e1c-f882-4529-a09e-a1705d3638fa"
+            }
+          },
+          {
+            "frame": 0.75,
+            "value": {
+              "__uuid__": "541381fc-048b-4f4f-9149-01d8bd22192e"
+            }
+          },
+          {
+            "frame": 1,
+            "value": {
+              "__uuid__": "ba59e7f4-14e6-439e-b9ec-65bbb193bd6b"
+            }
+          },
+          {
+            "frame": 1.3333333333333333,
+            "value": {
+              "__uuid__": "51327d64-baff-4316-be5b-4c853d86131e"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "events": [
+    {
+      "frame": 0.75,
+      "func": "spawnBullet",
+      "params": []
+    },
+    {
+      "frame": 1.3333333333333333,
+      "func": "resetIdle",
+      "params": []
+    }
+  ]
+}

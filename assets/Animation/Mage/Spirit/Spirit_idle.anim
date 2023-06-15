@@ -1,0 +1,37 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "Spirit_idle",
+  "_objFlags": 0,
+  "_native": "",
+  "_duration": 0.85,
+  "sample": 60,
+  "speed": 1,
+  "wrapMode": 2,
+  "curveData": {
+    "comps": {
+      "cc.Sprite": {
+        "spriteFrame": [
+          {
+            "frame": 0,
+            "value": {
+              "__uuid__": "ef1eab8a-ea08-4bd7-9b2e-fcb9de485f90"
+            }
+          },
+          {
+            "frame": 0.5,
+            "value": {
+              "__uuid__": "3158aa4a-b903-4952-86ec-29ab9096e979"
+            }
+          },
+          {
+            "frame": 0.8333333333333334,
+            "value": {
+              "__uuid__": "ef1eab8a-ea08-4bd7-9b2e-fcb9de485f90"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "events": []
+}

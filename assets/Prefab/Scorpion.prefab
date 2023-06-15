@@ -60,8 +60,8 @@
       "__type__": "TypedArray",
       "ctor": "Float64Array",
       "array": [
-        138.775,
-        147.832,
+        0,
+        0,
         0,
         0,
         0,
@@ -149,6 +149,11 @@
     "curLv": null,
     "path": [],
     "pathIdx": 0,
+    "isFreeze": false,
+    "freezeTime": 0,
+    "freezePrefab": {
+      "__uuid__": "79786277-06bc-4502-a92e-7c5e74d2a1ac"
+    },
     "_id": ""
   },
   {

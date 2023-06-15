@@ -21,7 +21,7 @@ const Hero = cc.Class({
 
     // LIFE-CYCLE CALLBACKS:
     onSpawn(){
-        console.log(this.node.position);
+
     },
 
     onload(){
@@ -92,7 +92,7 @@ const Hero = cc.Class({
 
     getTarget(){
         for (var i = this.targetList.length - 1; i >= 0; i--){
-            if (this.targetList[i].position.sub(this.node.parent.position).mag() < 150 && this.targetList[i] != null){
+            if (this.targetList[i] != null){
                 return this.targetList[i];
             }
 

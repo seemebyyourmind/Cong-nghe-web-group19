@@ -131,7 +131,7 @@
     "_id": ""
   },
   {
-    "__type__": "190c8OTCDtAzKn6T3JSr4b1",
+    "__type__": "de6893sH4BCc4r5N0GVtF6M",
     "_name": "",
     "_objFlags": 0,
     "node": {
@@ -139,10 +139,10 @@
     },
     "_enabled": true,
     "skillImg": {
-      "__uuid__": "4b8cb0a4-89a0-4c74-90b2-912b803a6c78"
+      "__uuid__": "4ed01da4-566a-480e-9fa4-8a5c648a9c92"
     },
-    "skillDescription": "Become raging, increase attack speed,  physicDMG in 5s",
-    "skillDuration": 5,
+    "skillDescription": "Become Rage-Mode, increase attackSPD and physicDMG in 3s",
+    "skillDuration": 3,
     "skillDmg": 0,
     "_id": ""
   },

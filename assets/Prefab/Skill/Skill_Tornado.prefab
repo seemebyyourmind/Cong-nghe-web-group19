@@ -155,7 +155,7 @@
     "_id": ""
   },
   {
-    "__type__": "190c8OTCDtAzKn6T3JSr4b1",
+    "__type__": "de6893sH4BCc4r5N0GVtF6M",
     "_name": "",
     "_objFlags": 0,
     "node": {
@@ -165,9 +165,9 @@
     "skillImg": {
       "__uuid__": "36a0ba10-b574-4f73-9950-ba805a2df431"
     },
-    "skillDescription": "Summon a fire tornado in 3s, deal 100% PhysicDMG per second to enemies",
+    "skillDescription": "Summon a Tornado at enemy position, deal 200% physicDMG  for enemies in 3s",
     "skillDuration": 3,
-    "skillDmg": 200,
+    "skillDmg": 0,
     "_id": ""
   },
   {

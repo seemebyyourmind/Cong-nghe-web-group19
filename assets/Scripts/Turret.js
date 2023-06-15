@@ -1,6 +1,7 @@
 import PoolManager from "PoolManager";
 import Hero from "Hero";
 import LevelController from "LevelController";
+import GameManager from 'GameManager';
 
 cc.Class({
     extends: cc.Component,
@@ -25,15 +26,14 @@ cc.Class({
 
 
     spawnHero(index){
-        if (this.isPlaced == false){
-            const heroList = LevelController.instance.curLevel.getComponent('GameLevel').heroList;
-            let hero = cc.instantiate(heroList[index]);
-            hero.parent = this.node;
-            hero.getComponent("Hero").onSpawn();
-            this.isPlaced = true;
+        const heroList = GameManager.instance.heroList;
+        let hero = cc.instantiate(heroList[index]);
+        hero.parent = this.node;
+        hero.getComponent("Hero").onSpawn();
+        this.isPlaced = true;
 
-            this.heroPanel.destroy();
-        } 
+        this.clickClose();
+        
     },
 
     start () {
@@ -41,13 +41,20 @@ cc.Class({
     },
 
     showHeroPanel(){
-        const heroList = LevelController.instance.curLevel.getComponent('GameLevel').heroList;
+        const heroList = GameManager.instance.heroList;
         for (var i = 0; i < heroList.length; i++){
             const newHero = cc.instantiate(heroList[i]);
             var sprite = newHero.getComponent('Hero').avatar;
             this.heroLabel[i].active = true;
             this.heroLabel[i].getComponent(cc.Sprite).spriteFrame = sprite;
         }
-        this.heroPanel.active = true;
+        if (!this.isPlaced){
+            this.heroPanel.active = true;
+        }
+        
+    },
+
+    clickClose(){
+        this.heroPanel.active = false;
     }
 });
