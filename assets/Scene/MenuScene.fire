@@ -415,7 +415,7 @@
         "__id__": 33
       }
     ],
-    "_active": false,
+    "_active": true,
     "_components": [
       {
         "__id__": 41
@@ -1237,9 +1237,7 @@
   },
   {
     "__type__": "cc.ClickEvent",
-    "target": {
-      "__id__": 8
-    },
+    "target": null,
     "component": "",
     "_componentId": "42f8frGv71NLaTxoxY4xFac",
     "handler": "clickPlay",
@@ -1247,7 +1245,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "SignUpButton",
+    "_name": "SignUp",
     "_objFlags": 0,
     "_parent": {
       "__id__": 8
@@ -1286,8 +1284,8 @@
       "__type__": "TypedArray",
       "ctor": "Float64Array",
       "array": [
-        145.544,
-        13.237,
+        155.234,
+        14.44,
         0,
         0,
         0,
@@ -1309,7 +1307,7 @@
     "_is3DNode": false,
     "_groupIndex": 0,
     "groupIndex": 0,
-    "_id": "46WczQUvlFzrOE4ohk7RgB"
+    "_id": "edd4b3VyZP65x55JoYjZG8"
   },
   {
     "__type__": "cc.Node",
@@ -1378,7 +1376,7 @@
     "_is3DNode": false,
     "_groupIndex": 0,
     "groupIndex": 0,
-    "_id": "9eSasFFfNCcrjOJ29hCvnJ"
+    "_id": "9cHpC1ahxAgrmY3sN/sU2K"
   },
   {
     "__type__": "cc.Node",
@@ -1440,7 +1438,7 @@
     "_is3DNode": false,
     "_groupIndex": 0,
     "groupIndex": 0,
-    "_id": "a5Hffg705EU6n6fKVN3SW+"
+    "_id": "10qauge75EF6ThDQ6J3elA"
   },
   {
     "__type__": "cc.Label",
@@ -1457,8 +1455,8 @@
     ],
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
-    "_string": "LOGIN",
-    "_N$string": "LOGIN",
+    "_string": "SignUp",
+    "_N$string": "SignUp",
     "_fontSize": 25.39999999999997,
     "_lineHeight": 40,
     "_enableWrapText": false,
@@ -1473,7 +1471,7 @@
     "_N$fontFamily": "Arial",
     "_N$overflow": 1,
     "_N$cacheMode": 1,
-    "_id": "4eEMafZNlAWrZ8Z8yYgbvk"
+    "_id": "c8fGEfpCBLwajxdttekWya"
   },
   {
     "__type__": "cc.Sprite",
@@ -1505,7 +1503,7 @@
     "_fillRange": 0,
     "_isTrimmedMode": true,
     "_atlas": null,
-    "_id": "daD+A3pEBMuLG1X7kUc3KD"
+    "_id": "e4Fs/uH2NFwaie4hvqZrQP"
   },
   {
     "__type__": "cc.Widget",
@@ -1532,7 +1530,7 @@
     "_isAbsVerticalCenter": true,
     "_originalWidth": 100,
     "_originalHeight": 40,
-    "_id": "be5JdPaXZMqo65FjQHqmmm"
+    "_id": "93R7fntmJPypKYZFraNkEz"
   },
   {
     "__type__": "cc.Button",
@@ -1618,13 +1616,11 @@
     "_N$target": {
       "__id__": 26
     },
-    "_id": "c96LpxtHFEIKK6ngVFBLHw"
+    "_id": "a4sLJQOrBPsaoVBkd9WbBN"
   },
   {
     "__type__": "cc.ClickEvent",
-    "target": {
-      "__id__": 8
-    },
+    "target": null,
     "component": "",
     "_componentId": "42f8frGv71NLaTxoxY4xFac",
     "handler": "clickPlay",
@@ -4428,7 +4424,7 @@
         "__id__": 148
       }
     ],
-    "_active": true,
+    "_active": false,
     "_components": [
       {
         "__id__": 149
