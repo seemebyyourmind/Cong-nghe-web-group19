@@ -4,7 +4,8 @@
     "Enemy",
     "Turret",
     "Bullet",
-    "Hero"
+    "Hero",
+    "Skill"
   ],
   "collision-matrix": [
     [
@@ -15,6 +16,7 @@
       false,
       false,
       true,
+      true,
       true
     ],
     [
@@ -31,6 +33,14 @@
     [
       false,
       true,
+      false,
+      false,
+      false
+    ],
+    [
+      false,
+      true,
+      false,
       false,
       false,
       false
@@ -63,5 +73,5 @@
     }
   },
   "last-module-event-record-time": 1686386656678,
-  "start-scene": "3388b17e-346e-4f1b-8bda-f0b28d4414fb"
+  "start-scene": "current"
 }
