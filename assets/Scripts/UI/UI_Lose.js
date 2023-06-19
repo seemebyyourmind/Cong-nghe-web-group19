@@ -9,7 +9,6 @@ cc.Class({
 
     clickReplay(){
         LevelController.instance.replay();
-        UIManager.instance.openUIGameplay();
     },
 
     clickHome(){

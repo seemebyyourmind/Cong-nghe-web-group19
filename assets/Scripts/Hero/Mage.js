@@ -1,5 +1,5 @@
 import Hero from 'Hero';
-
+import LevelController from 'LevelController';
 cc.Class({
     extends: Hero,
 
@@ -35,7 +35,7 @@ cc.Class({
     spawnBullet(){
         if (this.getTarget() != null){
             const bullet = cc.instantiate(this.bulletPrefab);
-            const parentNode = cc.director.getScene();
+            const parentNode = LevelController.instance.curLevel;
             bullet.setParent(parentNode);
             bullet.getComponent('Thunder_Mage').onInit(this.getTarget(), this.physicDMG + this.magicDMG);
         }   
@@ -43,7 +43,7 @@ cc.Class({
 
     castSkill(){
         const skill = cc.instantiate(this.skill);
-        const parentNode = cc.director.getScene();
+        const parentNode = LevelController.instance.curLevel;
         skill.setParent(parentNode);
         skill.position = cc.v2(this.node.parent.position.x + 30, this.node.parent.position.y + 20);
     },

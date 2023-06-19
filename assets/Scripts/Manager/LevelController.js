@@ -1,5 +1,5 @@
 import UIManager from 'UIManager';
-import GameLevel from "GameLevel";
+import GameLevel from 'GameLevel.js';
 import GameDataManager from 'GameDataManager';
 
 var LevelController = cc.Class({
@@ -11,10 +11,8 @@ var LevelController = cc.Class({
             type: cc.Prefab,
         },
         curLvIndex: 0,
-        curLevel: {
-            default: null,
-            type: GameLevel,
-        },
+
+        curLevel: cc.Node,
 
         curLvProgress: cc.Float,
     },
@@ -41,18 +39,21 @@ var LevelController = cc.Class({
     // update (dt) {},
 
     loadLevel(index){
+        cc.director.resume();
+
         if (this.curLevel){
             this.curLevel.destroy();
         }
         this.curLevel = cc.instantiate(this.levelList[index]);
         this.curLevel.parent = this.node;
+        this.curLvProgress = 0;
+        console.log("Max :" + this.curLevel.getComponent('GameLevel').maxProgress);
         UIManager.instance.openUILoading();
         setTimeout(this.startLevel, 500);
     },
 
     startLevel(){
-        this.curLvProgress = 0;
-        cc.director.resume();
+        console.log("Progress :" + this.curLvProgress);
         GameDataManager.instance.coinAmount = 1000;
         UIManager.instance.openUIGameplay();
     },
@@ -72,14 +73,17 @@ var LevelController = cc.Class({
 
     increaseProgress(){
         this.curLvProgress++;
+        console.log(this.curLvProgress);
         if (this.curLvProgress == this.curLevel.getComponent('GameLevel').maxProgress){
-            this.winLevel();
+            setTimeout(this.winLevel, 3000);
         }
     },
 
     loseLevel(){
-        UIManager.instance.openUILose();
-        cc.director.pause();
+        setTimeout(function() {
+            UIManager.instance.openUILose();
+            cc.director.pause();
+        }, 3000); 
     },
 
     winLevel(){

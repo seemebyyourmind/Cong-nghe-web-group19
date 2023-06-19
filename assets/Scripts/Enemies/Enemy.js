@@ -25,7 +25,6 @@ var Enemy = cc.Class({
 
     onSpawn (path){
         this.path = path.pathNode;
-        console.log(this.path);
         this.pathIdx = 0;
         this.node.position = this.path[0].position;
         this.curHealth = this.health;

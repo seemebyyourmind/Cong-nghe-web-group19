@@ -8586,7 +8586,7 @@
     "castle": {
       "__id__": 225
     },
-    "maxProgress": 60,
+    "maxProgress": 65,
     "spawning": [],
     "spawnedAmount": [],
     "spawningID": [],
@@ -8645,7 +8645,7 @@
     "enemyPrefab": {
       "__uuid__": "aa2a45fd-bab5-4547-ae8e-681b2a198ee7"
     },
-    "amount": 10,
+    "amount": 15,
     "path": {
       "__id__": 34
     },

@@ -85,7 +85,6 @@ cc.Class({
     setTowerLifeBar(curValue, maxValue){
         this.towerLifeBar.progress = curValue / maxValue;
         this.towerLifeText.string = curValue + "/" + maxValue;
-        
     },
 
     setCoinAmount(value){

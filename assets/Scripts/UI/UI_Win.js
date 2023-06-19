@@ -9,7 +9,6 @@ cc.Class({
 
     clickNextLevel(){
         LevelController.instance.nextLevel();
-        UIManager.instance.openUIGameplay();
     },
 
     clickHome(){

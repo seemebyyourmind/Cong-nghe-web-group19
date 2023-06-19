@@ -1,4 +1,5 @@
-import EnemyWave from 'EnemyWave' 
+import EnemyWave from 'EnemyWave';
+import LevelController from 'LevelController';
 
 const GameLevel = cc.Class({
     extends: cc.Component,

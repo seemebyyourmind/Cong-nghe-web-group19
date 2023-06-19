@@ -269,8 +269,8 @@
       "__type__": "TypedArray",
       "ctor": "Float64Array",
       "array": [
-        832.79,
-        229.388,
+        521.831,
+        158.662,
         0,
         0,
         0,
@@ -1274,8 +1274,8 @@
       "__type__": "TypedArray",
       "ctor": "Float64Array",
       "array": [
-        612.745,
-        307.906,
+        927.562,
+        507.976,
         0,
         0,
         0,
@@ -2279,8 +2279,8 @@
       "__type__": "TypedArray",
       "ctor": "Float64Array",
       "array": [
-        523.564,
-        159.594,
+        805.757,
+        506.828,
         0,
         0,
         0,
@@ -3284,8 +3284,8 @@
       "__type__": "TypedArray",
       "ctor": "Float64Array",
       "array": [
-        1021.816,
-        133.421,
+        693.182,
+        480.747,
         0,
         0,
         0,
@@ -5294,8 +5294,8 @@
       "__type__": "TypedArray",
       "ctor": "Float64Array",
       "array": [
-        926.499,
-        510.219,
+        612.703,
+        306.947,
         0,
         0,
         0,
@@ -6299,8 +6299,8 @@
       "__type__": "TypedArray",
       "ctor": "Float64Array",
       "array": [
-        692.651,
-        481.874,
+        726.577,
+        262.726,
         0,
         0,
         0,
@@ -7304,8 +7304,8 @@
       "__type__": "TypedArray",
       "ctor": "Float64Array",
       "array": [
-        805.104,
-        507.741,
+        832.851,
+        229.061,
         0,
         0,
         0,
@@ -8309,8 +8309,8 @@
       "__type__": "TypedArray",
       "ctor": "Float64Array",
       "array": [
-        726.338,
-        264.282,
+        1019.45,
+        130.344,
         0,
         0,
         0,
@@ -12166,7 +12166,7 @@
     "castle": {
       "__id__": 321
     },
-    "maxProgress": 70,
+    "maxProgress": 75,
     "spawning": [],
     "spawnedAmount": [],
     "spawningID": [],
@@ -12225,7 +12225,7 @@
     "enemyPrefab": {
       "__uuid__": "7e70346e-60ad-4238-8458-300901177cd9"
     },
-    "amount": 10,
+    "amount": 15,
     "path": {
       "__id__": 296
     },

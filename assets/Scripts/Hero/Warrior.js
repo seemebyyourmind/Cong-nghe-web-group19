@@ -1,5 +1,6 @@
-
+import LevelController from 'LevelController';
 import Hero from 'Hero';
+
 cc.Class({
     extends: Hero,
 
@@ -33,7 +34,7 @@ cc.Class({
 
     castSkill(target){
         const skill = cc.instantiate(this.skill);
-        const parentNode = cc.director.getScene();
+        const parentNode = LevelController.instance.curLevel;
         skill.setParent(parentNode);
         skill.getComponent('WarriorSkill').onInit(target, 1.5 * this.magicDMG, this.freezeTime);
         skill.position = cc.v2(this.node.parent.position.x, this.node.parent.position.y);

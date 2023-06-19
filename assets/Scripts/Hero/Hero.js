@@ -1,6 +1,4 @@
-
-
-import PoolManager from "PoolManager";
+import LevelController from 'LevelController';
 
 const Hero = cc.Class({
     extends: cc.Component,
@@ -85,7 +83,7 @@ const Hero = cc.Class({
     spawnBullet(){
         if (this.getTarget()){
             const bullet = cc.instantiate(this.bulletPrefab);
-            const parentNode = cc.director.getScene();
+            const parentNode = LevelController.instance.curLevel;
             bullet.setParent(parentNode);
             bullet.getComponent('Bullet').onInit(this.node.parent, this.target, this.physicDMG + this.magicDMG);
         }
