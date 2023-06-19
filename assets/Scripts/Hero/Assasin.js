@@ -12,30 +12,36 @@ cc.Class({
     // onLoad () {},
 
     start () {
+        this._super();
         this.skillRemain = 0;
+        this.defaultPhysicDMG = this.physicDMG;
+        this.defaultSPD = this.attackSPD;
     },
 
     update (dt) {
         this._super(dt);
         
-        if (this.skillCD <= 0){
-            if (this.getTarget() != null){
-                this.castSkill();
-                this.skillCD = 10;
+        if (this.isOpenSkill){
+            if (this.skillCD <= 0){
+                if (this.getTarget() != null){
+                    this.castSkill();
+                    this.skillCD = 10;
+                }
+                
+            }else{
+                this.skillCD -= dt;
             }
-            
-        }else{
-            this.skillCD -= dt;
+    
+            if (this.skillRemain > 0){
+                this.attackSPD = this.defaultSPD * 1.5;
+                this.physicDMG = this.defaultPhysicDMG * 1.5;
+                this.skillRemain -= dt;
+            }else{
+                this.attackSPD = this.defaultSPD;
+                this.physicDMG = this.defaultPhysicDMG;
+            }
         }
-
-        if (this.skillRemain > 0){
-            this.attackSPD = 2;
-            this.physicDMG = 150;
-            this.skillRemain -= dt;
-        }else{
-            this.attackSPD = 1.2;
-            this.physicDMG = 100;
-        }
+        
     },
 
     castSkill(){

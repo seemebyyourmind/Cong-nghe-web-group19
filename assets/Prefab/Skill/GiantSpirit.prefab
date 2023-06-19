@@ -164,7 +164,7 @@
     "skillImg": {
       "__uuid__": "ef1eab8a-ea08-4bd7-9b2e-fcb9de485f90"
     },
-    "skillDescription": "Summon a Giant Spirit in 10s",
+    "skillDescription": "Summon a Giant Spirit attacks enemies, lasts for 10s",
     "skillDuration": 10,
     "skillDmg": 0,
     "targetList": [],

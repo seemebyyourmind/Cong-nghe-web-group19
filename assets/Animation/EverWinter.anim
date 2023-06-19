@@ -1,0 +1,115 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "EverWinter",
+  "_objFlags": 0,
+  "_native": "",
+  "_duration": 2.0166666666666666,
+  "sample": 60,
+  "speed": 1,
+  "wrapMode": 1,
+  "curveData": {
+    "comps": {
+      "cc.Sprite": {
+        "spriteFrame": [
+          {
+            "frame": 0.016666666666666666,
+            "value": {
+              "__uuid__": "d1b02e1d-4c0a-4ee3-b6e7-e37e8981d3fd"
+            }
+          },
+          {
+            "frame": 0.08333333333333333,
+            "value": {
+              "__uuid__": "4ecef183-fe01-4ccb-89e1-83c0863306b9"
+            }
+          },
+          {
+            "frame": 0.16666666666666666,
+            "value": {
+              "__uuid__": "202247ed-76f9-4cc7-8fc4-929b97857a03"
+            }
+          },
+          {
+            "frame": 0.25,
+            "value": {
+              "__uuid__": "9ca1ea65-f57b-4dd4-8e84-58848e3382ba"
+            }
+          },
+          {
+            "frame": 0.3333333333333333,
+            "value": {
+              "__uuid__": "658374f0-1739-47e3-9b33-df835c55a9f5"
+            }
+          },
+          {
+            "frame": 0.4166666666666667,
+            "value": {
+              "__uuid__": "e036bfed-ae3e-4c26-a587-b11c6065993e"
+            }
+          },
+          {
+            "frame": 0.5,
+            "value": {
+              "__uuid__": "8b842376-a8f7-4aae-9cfc-4b71a75ba804"
+            }
+          },
+          {
+            "frame": 0.5833333333333334,
+            "value": {
+              "__uuid__": "3ad29911-adc2-4882-88fc-c735cbd1d9e5"
+            }
+          },
+          {
+            "frame": 0.6666666666666666,
+            "value": {
+              "__uuid__": "75f4cdf1-843e-4e95-9dfc-f2645fb047fb"
+            }
+          },
+          {
+            "frame": 0.75,
+            "value": {
+              "__uuid__": "ba7946e1-6f93-4b90-bbd2-49ac8e8a2856"
+            }
+          },
+          {
+            "frame": 0.8333333333333334,
+            "value": {
+              "__uuid__": "32817302-3e76-41e9-909b-93d58ff765b6"
+            }
+          },
+          {
+            "frame": 1.0833333333333333,
+            "value": {
+              "__uuid__": "83a6ca96-5997-4965-a8fa-654ce0e9af96"
+            }
+          },
+          {
+            "frame": 1.4,
+            "value": {
+              "__uuid__": "14f28ecc-71cb-4aa4-bfbf-c503650b6eff"
+            }
+          },
+          {
+            "frame": 1.75,
+            "value": {
+              "__uuid__": "583cc173-41ef-4923-bb70-58c31b3cc135"
+            }
+          },
+          {
+            "frame": 2,
+            "value": {
+              "__uuid__": "583cc173-41ef-4923-bb70-58c31b3cc135"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "events": [
+    {
+      "frame": 1.5,
+      "func": "onEnableCollider",
+      "params": []
+    }
+  ]
+}

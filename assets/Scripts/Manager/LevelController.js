@@ -1,10 +1,4 @@
-// Learn cc.Class:
-//  - https://docs.cocos.com/creator/manual/en/scripting/class.html
-// Learn Attribute:
-//  - https://docs.cocos.com/creator/manual/en/scripting/reference/attributes.html
-// Learn life-cycle callbacks:
-//  - https://docs.cocos.com/creator/manual/en/scripting/life-cycle-callbacks.html
-
+import UIManager from 'UIManager';
 import GameLevel from "GameLevel";
 
 var LevelController = cc.Class({
@@ -32,10 +26,12 @@ var LevelController = cc.Class({
     
     onLoad() {
         LevelController.instance = this;       
+        this.curLvIndex = 0;
+        this.startLevel();
     },
 
     start () {
-        this.startLevel();
+        
     },
 
 
@@ -44,6 +40,7 @@ var LevelController = cc.Class({
     loadLevel(index){
         this.curLevel = cc.instantiate(this.levelList[index]);
         this.curLevel.parent = this.node;
+        UIManager.instance.openUIGameplay();
     },
 
     startLevel(){

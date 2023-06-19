@@ -167,6 +167,10 @@
     "skill": {
       "__uuid__": "7a4c8cab-6963-4c9b-a969-58a9673e6ac0"
     },
+    "collider": {
+      "__id__": 4
+    },
+    "Name": "Mage",
     "targetList": [],
     "atkCD": 0,
     "skillCD": 20,
@@ -179,6 +183,8 @@
     "bulletPrefab": {
       "__uuid__": "8746104e-1de3-4157-8774-06f03c7d2b98"
     },
+    "isOpenSkill": false,
+    "freezeTime": 0,
     "_id": ""
   },
   {

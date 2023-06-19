@@ -120,8 +120,10 @@
     },
     "_enabled": true,
     "damage": 5,
-    "speed": 4,
+    "speed": 6,
     "target": null,
+    "isSetFreeze": false,
+    "freezeTime": 0,
     "_id": ""
   },
   {

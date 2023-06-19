@@ -10,6 +10,8 @@ const Hero = cc.Class({
         magicDMG: cc.Float,
         attackSPD: cc.Float,
         skill: cc.Prefab,
+        collider: cc.CircleCollider,
+        Name: cc.String,
 
         targetList: [cc.Node],
         atkCD: 0,
@@ -17,6 +19,8 @@ const Hero = cc.Class({
         anim: cc.Animation,
         avatar: cc.SpriteFrame,
         bulletPrefab: cc.Prefab,
+        isOpenSkill: false,
+        freezeTime: cc.Float,
     },
 
     // LIFE-CYCLE CALLBACKS:
@@ -91,13 +95,15 @@ const Hero = cc.Class({
     },
 
     getTarget(){
-        for (var i = this.targetList.length - 1; i >= 0; i--){
-            if (this.targetList[i] != null){
-                return this.targetList[i];
-            }
-
+        for (var i = 0; i < this.targetList.length; i++){
             if (!this.targetList[i].isValid){
                 this.removeTarget(this.targetList[i]);
+            }
+        }
+
+        for (var i = 0; i < this.targetList.length; i++){
+            if (this.targetList[i] != null){
+                return this.targetList[i];
             }
         }
         return null;

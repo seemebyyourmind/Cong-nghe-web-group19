@@ -167,6 +167,10 @@
     "skill": {
       "__uuid__": "95c10c53-afce-4fa5-93a2-1f1c8b66cc2d"
     },
+    "collider": {
+      "__id__": 4
+    },
+    "Name": "Assasin",
     "targetList": [],
     "atkCD": 0,
     "skillCD": 5,
@@ -179,6 +183,8 @@
     "bulletPrefab": {
       "__uuid__": "27b7aab0-5787-4321-aa22-ecceb42c4fd8"
     },
+    "isOpenSkill": false,
+    "freezeTime": 0,
     "skillRemain": 0,
     "_id": ""
   },

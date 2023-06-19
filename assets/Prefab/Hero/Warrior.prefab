@@ -167,6 +167,10 @@
     "skill": {
       "__uuid__": "85c8bd22-19df-457a-b1bd-40e15a0a758d"
     },
+    "collider": {
+      "__id__": 4
+    },
+    "Name": "Warrior",
     "targetList": [],
     "atkCD": 0,
     "skillCD": 15,
@@ -179,6 +183,8 @@
     "bulletPrefab": {
       "__uuid__": "3f690181-6c17-4dca-9a1a-4c295606d914"
     },
+    "isOpenSkill": false,
+    "freezeTime": 0,
     "_id": ""
   },
   {

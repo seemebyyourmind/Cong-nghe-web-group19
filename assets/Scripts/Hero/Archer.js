@@ -12,20 +12,23 @@ cc.Class({
     // onLoad () {},
 
     start () {
-
+        this._super();
     },
 
     update (dt) {
         this._super(dt);
         
-        if (this.skillCD <= 0){
-            if (this.getTarget() != null){
-                this.castSkill(this.getTarget());
-                this.skillCD = 5;
+        if (this.isOpenSkill){
+            if (this.skillCD <= 0){
+                if (this.getTarget() != null){
+                    this.castSkill(this.getTarget());
+                    this.skillCD = 5;
+                }
+            }else{
+                this.skillCD -= dt;
             }
-        }else{
-            this.skillCD -= dt;
         }
+        
     },
 
     castSkill(target){

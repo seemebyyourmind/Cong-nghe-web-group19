@@ -4,7 +4,7 @@ cc.Class({
     extends: Hero,
 
     properties: {
-
+        
     },
 
     // LIFE-CYCLE CALLBACKS:
@@ -18,21 +18,24 @@ cc.Class({
     update (dt) {
         this._super(dt);
         
-        if (this.skillCD <= 0){
-            if (this.getTarget() != null){
-                this.castSkill(this.getTarget());
-                this.skillCD = 15;
+        if (this.isOpenSkill){
+            if (this.skillCD <= 0){
+                if (this.getTarget() != null){
+                    this.castSkill(this.getTarget());
+                    this.skillCD = 15;
+                }
+            }else{
+                this.skillCD -= dt;
             }
-        }else{
-            this.skillCD -= dt;
         }
+        
     },
 
     castSkill(target){
         const skill = cc.instantiate(this.skill);
         const parentNode = cc.director.getScene();
         skill.setParent(parentNode);
-        skill.getComponent('Hero_Skill').onInit(target, 1.5 * this.magicDMG);
+        skill.getComponent('WarriorSkill').onInit(target, 1.5 * this.magicDMG, this.freezeTime);
         skill.position = cc.v2(this.node.parent.position.x, this.node.parent.position.y);
     },
 });

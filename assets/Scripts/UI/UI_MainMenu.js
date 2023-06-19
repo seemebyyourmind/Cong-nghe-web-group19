@@ -19,7 +19,6 @@ cc.Class({
 
     clickPlay(){
         cc.director.loadScene('GameplayScene');
-        UIManager.instance.openUIGameplay();
     },
 
     clickHero(){

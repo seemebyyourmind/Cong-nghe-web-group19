@@ -9,6 +9,7 @@ cc.Class({
         magicDMG_text: cc.Label,
         atkSPD_text: cc.Label,
 
+        heroName: cc.Label,
         skillImg: cc.Node,
         skillDescription: cc.Label,
         heroAnimation: cc.Animation,
@@ -35,6 +36,7 @@ cc.Class({
     displayHero(index){
         const heroList = GameManager.instance.heroList;
         const newHero = cc.instantiate(heroList[index]).getComponent('Hero');
+        this.heroName.string = newHero.Name;
 
         this.physicDMG_text.string = newHero.physicDMG.toString();
         this.magicDMG_text.string = newHero.magicDMG.toString();

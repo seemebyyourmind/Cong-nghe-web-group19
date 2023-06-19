@@ -13,8 +13,11 @@ cc.Class({
 
     // onLoad () {},
 
-    start () {
-
+    onInit(target, dmg, freezeTime){
+        this.target = target;
+        this.skillDmg = dmg;
+        this.freezeTime = freezeTime;
+        this.direct = this.target.position.sub(this.node.position);
     },
 
     update (dt) {
@@ -22,11 +25,13 @@ cc.Class({
             this.node.destroy();
         }else{
             this.skillDuration -= dt;
-            var moveStep = this.direct.normalize().mulSelf(-this.speed);
+            var moveStep = this.direct.normalize().mulSelf(this.speed);
 
             this.node.position = cc.v2(this.node.position.x + moveStep.x, this.node.position.y + moveStep.y);
-            const angle = cc.v2(0, 1).signAngle(moveStep.normalize()) * cc.macro.RAD_TO_DEG;
-            this.node.lookAt(this.target.position);
+            const angleRadians = Math.atan2(moveStep.x, moveStep.y);
+            const angleDegrees = cc.misc.radiansToDegrees(angleRadians);
+
+            this.node.angle = -angleDegrees;
         }
     },
 

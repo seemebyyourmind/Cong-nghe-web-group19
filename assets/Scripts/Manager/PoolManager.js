@@ -9,10 +9,7 @@ var PoolManager = cc.Class({
     extends: cc.Component,
 
     properties: {
-        ObjectPrefabs: {
-            default: [],
-            type: cc.Prefab,
-        },
+        ObjectPrefabs: [cc.Prefab],
     },
 
     // LIFE-CYCLE CALLBACKS:
@@ -29,13 +26,6 @@ var PoolManager = cc.Class({
         for (let i = 0; i < initCount; ++i) {
             let enemy = cc.instantiate(this.ObjectPrefabs[0]); // create node instance
             this.enemyPool.put(enemy); // populate your pool with put method
-        }
-
-        this.bulletPool = new cc.NodePool();
-
-        for (let i = 0; i < initCount; ++i) {
-            let bullet = cc.instantiate(this.ObjectPrefabs[1]); // create node instance
-            this.bulletPool.put(bullet); // populate your pool with put method
         }
     },
 
@@ -54,21 +44,4 @@ var PoolManager = cc.Class({
         this.enemyPool.put(enemy);
         console.log(enemy.parent);
     },
-
-    spawnBullet(turret, target){
-        let bullet = null;
-        if (this.bulletPool.size() > 0) { // use size method to check if there're nodes available in the pool
-            bullet = this.bulletPool.get();
-        } else { // if not enough node in the pool, we call cc.instantiate to create node
-            bullet = cc.instantiate(this.ObjectPrefabs[1]);
-        }
-        bullet.parent = this.node; // add new enemy node to the node tree
-        bullet.getComponent('Bullet').onInit(turret, target);
-    },
-
-    deSpawnBullet(bullet){
-        
-        this.bulletPool.put(bullet);
-    }
-
 });

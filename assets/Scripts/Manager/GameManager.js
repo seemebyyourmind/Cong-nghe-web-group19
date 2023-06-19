@@ -1,12 +1,16 @@
 
 import Hero from 'Hero';
+import UI_Gameplay from 'UI_Gameplay';
 
 const GameManager = new cc.Class({
     extends: cc.Component,
 
     properties: {
         heroList: [cc.Prefab],
+        gameplayUI: UI_Gameplay,
     },
+
+    
 
     // LIFE-CYCLE CALLBACKS:
 
@@ -20,7 +24,11 @@ const GameManager = new cc.Class({
         
     },
 
-    start () {
-
+    pauseGame(){
+        cc.director.pause();
     },
+
+    resumeGame(){
+        cc.director.resume();
+    }
 });

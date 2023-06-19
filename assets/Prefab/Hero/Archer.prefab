@@ -167,6 +167,10 @@
     "skill": {
       "__uuid__": "54168a85-dc3d-49d8-bd2e-f8fa7620c1d5"
     },
+    "collider": {
+      "__id__": 4
+    },
+    "Name": "Archer",
     "targetList": [],
     "atkCD": 0,
     "skillCD": 5,
@@ -179,6 +183,8 @@
     "bulletPrefab": {
       "__uuid__": "f15df1fe-afa3-4ed9-abae-0dce59854f8e"
     },
+    "isOpenSkill": false,
+    "freezeTime": 0,
     "_id": ""
   },
   {

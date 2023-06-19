@@ -1,0 +1,38 @@
+{
+  "ver": "2.3.7",
+  "uuid": "d1cd5a0f-b2a8-41cc-bab8-9c04c1613a5e",
+  "importer": "texture",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "genMipmaps": false,
+  "packable": true,
+  "width": 256,
+  "height": 256,
+  "platformSettings": {},
+  "subMetas": {
+    "ManaCrystalMonster_2": {
+      "ver": "1.0.6",
+      "uuid": "83a6ca96-5997-4965-a8fa-654ce0e9af96",
+      "importer": "sprite-frame",
+      "rawTextureUuid": "d1cd5a0f-b2a8-41cc-bab8-9c04c1613a5e",
+      "trimType": "custom",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0.3000000000000398,
+      "offsetY": 12.649999999999878,
+      "trimX": 12.100000000000003,
+      "trimY": 0,
+      "width": 232.40000000000006,
+      "height": 230.70000000000024,
+      "rawWidth": 256,
+      "rawHeight": 256,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

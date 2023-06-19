@@ -1,0 +1,55 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "WolfRun",
+  "_objFlags": 0,
+  "_native": "",
+  "_duration": 0.38333333333333336,
+  "sample": 60,
+  "speed": 1,
+  "wrapMode": 2,
+  "curveData": {
+    "comps": {
+      "cc.Sprite": {
+        "spriteFrame": [
+          {
+            "frame": 0,
+            "value": {
+              "__uuid__": "c2f0b4a2-65be-42a1-9a5a-01fc3e2c33a5"
+            }
+          },
+          {
+            "frame": 0.03333333333333333,
+            "value": {
+              "__uuid__": "808f6125-8125-41d0-9893-b4a855a857d3"
+            }
+          },
+          {
+            "frame": 0.1,
+            "value": {
+              "__uuid__": "4e120d4f-41ac-48f2-a248-f1c61c03e01a"
+            }
+          },
+          {
+            "frame": 0.18333333333333332,
+            "value": {
+              "__uuid__": "8d626afd-d533-41bc-9181-585723cf3518"
+            }
+          },
+          {
+            "frame": 0.2833333333333333,
+            "value": {
+              "__uuid__": "d3ec466b-e1eb-4f6b-9ac9-1d852ec1521e"
+            }
+          },
+          {
+            "frame": 0.36666666666666664,
+            "value": {
+              "__uuid__": "683f6843-e7c5-473c-b2d8-fac3ba15ac2f"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "events": []
+}

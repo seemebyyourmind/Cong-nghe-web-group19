@@ -26,6 +26,7 @@ cc.Class({
 
 
     spawnHero(index){
+        console.log(index);
         const heroList = GameManager.instance.heroList;
         let hero = cc.instantiate(heroList[index]);
         hero.parent = this.node;
