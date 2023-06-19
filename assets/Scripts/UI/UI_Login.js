@@ -6,33 +6,53 @@
 //  - https://docs.cocos.com/creator/manual/en/scripting/life-cycle-callbacks.html
 
 cc.Class({
-    extends: cc.Component,
+  extends: cc.Component,
 
-    properties: {
-        // foo: {
-        //     // ATTRIBUTES:
-        //     default: null,        // The default value will be used only when the component attaching
-        //                           // to a node for the first time
-        //     type: cc.SpriteFrame, // optional, default is typeof default
-        //     serializable: true,   // optional, default is true
-        // },
-        // bar: {
-        //     get () {
-        //         return this._bar;
-        //     },
-        //     set (value) {
-        //         this._bar = value;
-        //     }
-        // },
-    },
+  properties: {
+    usernameLabel: cc.Label,
 
-    // LIFE-CYCLE CALLBACKS:
+    passwordLabel: cc.Label,
 
-    // onLoad () {},
+    usernameTextBox: cc.EditBox,
 
-    start () {
+    passwordTextBox: cc.EditBox,
 
-    },
+    loginButton: cc.Button,
 
-    // update (dt) {},
+    logErr: cc.Node,
+  },
+
+  onLoad() {
+    // Hàm này được gọi khi component được tạo và liên kết với một node
+    // Được sử dụng để khởi tạo các thành phần và thiết lập sự kiện
+    // Khởi tạo các thành phần UI và gán sự kiện
+    // Ví dụ:
+  },
+  // LIFE-CYCLE CALLBACKS:
+
+  // onLoad () {},
+
+  start() {},
+  clickSubmit() {
+    if (this.loginButton !== null)
+      this.loginButton.node.on("click", this.onLoginButtonClick, this);
+  },
+
+  // this.Destion.string = err;
+
+  clickCloseErr() {
+    this.logErr.active = false;
+  },
+  onLoginButtonClick() {
+    console.log(this.usernameTextBox.string);
+    console.log(this.passwordTextBox.string);
+    this.logErr.active = true;
+    console.log(this.logErr);
+  },
+
+  // var username = this.usernameTextBox.getString();
+  // var password = this.passwordTextBox.getString();
+  // console.log(username, password);
+
+  // update (dt) {},
 });

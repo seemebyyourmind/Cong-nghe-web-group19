@@ -6,33 +6,55 @@
 //  - https://docs.cocos.com/creator/manual/en/scripting/life-cycle-callbacks.html
 
 cc.Class({
-    extends: cc.Component,
+  extends: cc.Component,
 
-    properties: {
-        // foo: {
-        //     // ATTRIBUTES:
-        //     default: null,        // The default value will be used only when the component attaching
-        //                           // to a node for the first time
-        //     type: cc.SpriteFrame, // optional, default is typeof default
-        //     serializable: true,   // optional, default is true
-        // },
-        // bar: {
-        //     get () {
-        //         return this._bar;
-        //     },
-        //     set (value) {
-        //         this._bar = value;
-        //     }
-        // },
-    },
+  properties: {
+    usernameLabel: cc.Label,
+    usernameTextBox: cc.EditBox,
 
-    // LIFE-CYCLE CALLBACKS:
+    passwordLabel: cc.Label,
+    passwordTextBox: cc.EditBox,
 
-    // onLoad () {},
+    emailLabel: cc.Label,
+    emailTextBox: cc.EditBox,
 
-    start () {
+    password2Label: cc.Label,
+    password2TextBox: cc.EditBox,
 
-    },
+    loginButton: cc.Button,
+    logErr: cc.Node,
+  },
 
-    // update (dt) {},
+  onLoad() {
+    // Hàm này được gọi khi component được tạo và liên kết với một node
+    // Được sử dụng để khởi tạo các thành phần và thiết lập sự kiện
+    // Khởi tạo các thành phần UI và gán sự kiện
+    // Ví dụ:
+  },
+  // LIFE-CYCLE CALLBACKS:
+
+  // onLoad () {},
+
+  start() {},
+  clickSubmit() {
+    if (this.loginButton !== null)
+      this.loginButton.node.on("click", this.onLoginButtonClick, this);
+  },
+
+  clickCloseErr() {
+    this.logErr.active = false;
+  },
+  onLoginButtonClick() {
+    console.log(this.usernameTextBox.string);
+    console.log(this.passwordTextBox.string);
+    console.log(this.password2TextBox.string);
+    console.log(this.emailTextBox.string);
+    this.logErr.active = true;
+  },
+
+  // var username = this.usernameTextBox.getString();
+  // var password = this.passwordTextBox.getString();
+  // console.log(username, password);
+
+  // update (dt) {},
 });
