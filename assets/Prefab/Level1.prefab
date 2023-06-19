@@ -55,7 +55,7 @@
       }
     ],
     "_prefab": {
-      "__id__": 232
+      "__id__": 236
     },
     "_opacity": 255,
     "_color": {
@@ -8569,11 +8569,24 @@
     "Waves": [
       {
         "__id__": 231
+      },
+      {
+        "__id__": 232
+      },
+      {
+        "__id__": 233
+      },
+      {
+        "__id__": 234
+      },
+      {
+        "__id__": 235
       }
     ],
     "castle": {
       "__id__": 225
     },
+    "maxProgress": 60,
     "spawning": [],
     "spawnedAmount": [],
     "spawningID": [],
@@ -8589,6 +8602,54 @@
       "__id__": 34
     },
     "startTime": 0,
+    "spawnRate": 1
+  },
+  {
+    "__type__": "EnemyWave",
+    "enemyPrefab": {
+      "__uuid__": "7e70346e-60ad-4238-8458-300901177cd9"
+    },
+    "amount": 15,
+    "path": {
+      "__id__": 34
+    },
+    "startTime": 10,
+    "spawnRate": 0.5
+  },
+  {
+    "__type__": "EnemyWave",
+    "enemyPrefab": {
+      "__uuid__": "aa2a45fd-bab5-4547-ae8e-681b2a198ee7"
+    },
+    "amount": 15,
+    "path": {
+      "__id__": 34
+    },
+    "startTime": 20,
+    "spawnRate": 0.8
+  },
+  {
+    "__type__": "EnemyWave",
+    "enemyPrefab": {
+      "__uuid__": "7e70346e-60ad-4238-8458-300901177cd9"
+    },
+    "amount": 10,
+    "path": {
+      "__id__": 34
+    },
+    "startTime": 30,
+    "spawnRate": 1
+  },
+  {
+    "__type__": "EnemyWave",
+    "enemyPrefab": {
+      "__uuid__": "aa2a45fd-bab5-4547-ae8e-681b2a198ee7"
+    },
+    "amount": 10,
+    "path": {
+      "__id__": 34
+    },
+    "startTime": 30,
     "spawnRate": 1
   },
   {

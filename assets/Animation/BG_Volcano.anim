@@ -1,0 +1,79 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "BG_Volcano",
+  "_objFlags": 0,
+  "_native": "",
+  "_duration": 2.35,
+  "sample": 60,
+  "speed": 1,
+  "wrapMode": 2,
+  "curveData": {
+    "comps": {
+      "cc.Sprite": {
+        "spriteFrame": [
+          {
+            "frame": 0,
+            "value": {
+              "__uuid__": "74f5c3c9-dd42-4c03-bbd9-ea7dfa20d630"
+            }
+          },
+          {
+            "frame": 0.3333333333333333,
+            "value": {
+              "__uuid__": "9bee626b-51b1-4174-9b18-e832f9e3b3ca"
+            }
+          },
+          {
+            "frame": 0.6666666666666666,
+            "value": {
+              "__uuid__": "31ebecac-c384-4fc4-a337-39aec9573ab7"
+            }
+          },
+          {
+            "frame": 1,
+            "value": {
+              "__uuid__": "74f5c3c9-dd42-4c03-bbd9-ea7dfa20d630"
+            }
+          },
+          {
+            "frame": 1.1666666666666667,
+            "value": {
+              "__uuid__": "9bee626b-51b1-4174-9b18-e832f9e3b3ca"
+            }
+          },
+          {
+            "frame": 1.3333333333333333,
+            "value": {
+              "__uuid__": "31ebecac-c384-4fc4-a337-39aec9573ab7"
+            }
+          },
+          {
+            "frame": 1.5833333333333333,
+            "value": {
+              "__uuid__": "74f5c3c9-dd42-4c03-bbd9-ea7dfa20d630"
+            }
+          },
+          {
+            "frame": 1.8333333333333333,
+            "value": {
+              "__uuid__": "9bee626b-51b1-4174-9b18-e832f9e3b3ca"
+            }
+          },
+          {
+            "frame": 2.0833333333333335,
+            "value": {
+              "__uuid__": "31ebecac-c384-4fc4-a337-39aec9573ab7"
+            }
+          },
+          {
+            "frame": 2.3333333333333335,
+            "value": {
+              "__uuid__": "74f5c3c9-dd42-4c03-bbd9-ea7dfa20d630"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "events": []
+}

@@ -13,7 +13,9 @@ cc.Class({
 
     onInit(target, dmg){
         this.damage = dmg;
-        this.node.position = target.position;
+        if (target){
+            this.node.position = cc.v2(target)
+        }
     },
 
     start () {

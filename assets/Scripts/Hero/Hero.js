@@ -83,10 +83,13 @@ const Hero = cc.Class({
 
 
     spawnBullet(){
-        const bullet = cc.instantiate(this.bulletPrefab);
-        const parentNode = cc.director.getScene();
-        bullet.setParent(parentNode);
-        bullet.getComponent('Bullet').onInit(this.node.parent, this.target, this.physicDMG + this.magicDMG);
+        if (this.getTarget()){
+            const bullet = cc.instantiate(this.bulletPrefab);
+            const parentNode = cc.director.getScene();
+            bullet.setParent(parentNode);
+            bullet.getComponent('Bullet').onInit(this.node.parent, this.target, this.physicDMG + this.magicDMG);
+        }
+        
     },
 
     resetIdle(){

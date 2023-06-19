@@ -1,0 +1,55 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "DarkMageRun",
+  "_objFlags": 0,
+  "_native": "",
+  "_duration": 0.85,
+  "sample": 60,
+  "speed": 1,
+  "wrapMode": 2,
+  "curveData": {
+    "comps": {
+      "cc.Sprite": {
+        "spriteFrame": [
+          {
+            "frame": 0,
+            "value": {
+              "__uuid__": "5cc3c3d0-44f0-42d6-a2e2-c5d989832515"
+            }
+          },
+          {
+            "frame": 0.16666666666666666,
+            "value": {
+              "__uuid__": "96a0355a-4828-406a-a771-08922f0d0b15"
+            }
+          },
+          {
+            "frame": 0.3333333333333333,
+            "value": {
+              "__uuid__": "fb2f7b97-d6c5-4bd5-a3f2-80756b2891b7"
+            }
+          },
+          {
+            "frame": 0.5,
+            "value": {
+              "__uuid__": "68b1b611-37f8-45c8-9b15-d2791b149497"
+            }
+          },
+          {
+            "frame": 0.6666666666666666,
+            "value": {
+              "__uuid__": "7355360b-c893-40fa-a6eb-1b41b057c7de"
+            }
+          },
+          {
+            "frame": 0.8333333333333334,
+            "value": {
+              "__uuid__": "90fd0f5f-bdd5-4907-ab56-808fad04c1d9"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "events": []
+}

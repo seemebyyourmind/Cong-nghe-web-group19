@@ -87,7 +87,7 @@
     },
     "description": "Increase freeze timeby Warrior's skill by 1s",
     "selected": false,
-    "heroType": 4,
+    "heroType": 3,
     "cost": 200,
     "heroList": [],
     "statType": 4,

@@ -1,0 +1,55 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "GhostRun",
+  "_objFlags": 0,
+  "_native": "",
+  "_duration": 0.85,
+  "sample": 60,
+  "speed": 1,
+  "wrapMode": 2,
+  "curveData": {
+    "comps": {
+      "cc.Sprite": {
+        "spriteFrame": [
+          {
+            "frame": 0,
+            "value": {
+              "__uuid__": "58c5f0da-ae80-43ab-bafd-1835f6fa584d"
+            }
+          },
+          {
+            "frame": 0.16666666666666666,
+            "value": {
+              "__uuid__": "58db3b4b-7d87-42dc-a706-5d700439fbf7"
+            }
+          },
+          {
+            "frame": 0.3333333333333333,
+            "value": {
+              "__uuid__": "12a1bc79-6061-4567-9a8d-f4ff5513cf3d"
+            }
+          },
+          {
+            "frame": 0.5,
+            "value": {
+              "__uuid__": "3f2c07f1-669c-4b4d-a263-50db2ea563f1"
+            }
+          },
+          {
+            "frame": 0.6666666666666666,
+            "value": {
+              "__uuid__": "5c83e794-b8ef-48bb-96e5-e61f731371ee"
+            }
+          },
+          {
+            "frame": 0.8333333333333334,
+            "value": {
+              "__uuid__": "0f7ca67c-90af-4597-acbf-daa25c8146c5"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "events": []
+}

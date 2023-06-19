@@ -1,0 +1,38 @@
+{
+  "ver": "2.3.7",
+  "uuid": "bd247a68-56f7-4f71-acb8-6a26ccc7749a",
+  "importer": "texture",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "genMipmaps": false,
+  "packable": true,
+  "width": 512,
+  "height": 256,
+  "platformSettings": {},
+  "subMetas": {
+    "SandField": {
+      "ver": "1.0.6",
+      "uuid": "e3384f00-4069-4573-a93a-824e2b7d7dc5",
+      "importer": "sprite-frame",
+      "rawTextureUuid": "bd247a68-56f7-4f71-acb8-6a26ccc7749a",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 512,
+      "height": 256,
+      "rawWidth": 512,
+      "rawHeight": 256,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

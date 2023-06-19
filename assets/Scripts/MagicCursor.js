@@ -1,3 +1,4 @@
+
 cc.Class({
     extends: cc.Component,
 
@@ -28,7 +29,6 @@ cc.Class({
     onMouseDown(event) {
         // Get the mouse position relative to the node's parent
         const mousePos = this.node.parent.convertToNodeSpaceAR(event.getLocation());
-        
         this.skill.setParent(this.node.parent);
         this.skill.position = mousePos;
         this.node.active = false;

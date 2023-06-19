@@ -1,0 +1,38 @@
+{
+  "ver": "2.3.7",
+  "uuid": "93d7ba5b-6c35-462f-8dd1-f1ec2399e818",
+  "importer": "texture",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "genMipmaps": false,
+  "packable": true,
+  "width": 512,
+  "height": 256,
+  "platformSettings": {},
+  "subMetas": {
+    "Mysterious Hills": {
+      "ver": "1.0.6",
+      "uuid": "ac8b8d9d-b9e5-4ebf-a609-be75875ffb6d",
+      "importer": "sprite-frame",
+      "rawTextureUuid": "93d7ba5b-6c35-462f-8dd1-f1ec2399e818",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 512,
+      "height": 256,
+      "rawWidth": 512,
+      "rawHeight": 256,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

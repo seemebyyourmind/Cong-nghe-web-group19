@@ -12,6 +12,9 @@ const UIManager = cc.Class({
         uiGameplay: cc.Node,
         uiMainMenu: cc.Node,
         uiHeroDetail: cc.Node,
+        uiLose: cc.Node,
+        uiWin: cc.Node,
+        uiLoading: cc.Node,
     },
 
     // LIFE-CYCLE CALLBACKS:
@@ -31,17 +34,55 @@ const UIManager = cc.Class({
         this.uiMainMenu.active = false;
         this.uiHeroDetail.active = false;
         this.uiGameplay.active = true;
+        this.uiLose.active = false;
+        this.uiWin.active = false;
+        this.uiLoading.active = false;
     },
 
     openUIMainMenu(){
         this.uiMainMenu.active = true;
         this.uiGameplay.active = false;
         this.uiHeroDetail.active = false;
+        this.uiLose.active = false;
+        this.uiWin.active = false;
+        this.uiLoading.active = false;
     },
 
     openUIHeroDetail(){
         this.uiMainMenu.active = false;
         this.uiGameplay.active = false;
         this.uiHeroDetail.active = true;
+        this.uiLose.active = false;
+        this.uiLoading.active = false;
+        this.uiWin.active = false;
+    },
+
+    openUILose(){
+        this.uiMainMenu.active = false;
+        this.uiGameplay.active = false;
+        this.uiHeroDetail.active = false;
+        this.uiLose.active = true;
+        this.uiWin.active = false;
+        this.uiLoading.active = false;
+    },
+
+    openUIWin(){
+        this.uiMainMenu.active = false;
+        this.uiGameplay.active = false;
+        this.uiHeroDetail.active = false;
+        this.uiLose.active = false;
+        this.uiWin.active = true;
+        this.uiLoading.active = false;
+    },
+
+    openUILoading(){
+        this.uiMainMenu.active = false;
+        this.uiGameplay.active = false;
+        this.uiHeroDetail.active = false;
+        this.uiLose.active = false;
+        this.uiWin.active = false;
+        this.uiLoading.active = true;
     }
+
+
 });

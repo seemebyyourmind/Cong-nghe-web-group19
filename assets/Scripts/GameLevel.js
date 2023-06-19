@@ -6,6 +6,7 @@ const GameLevel = cc.Class({
     properties: {
         Waves: [EnemyWave],
         castle: cc.Node,
+        maxProgress: cc.Float,
 
         spawning: [],
         spawnedAmount: [],

@@ -1,0 +1,38 @@
+{
+  "ver": "2.3.7",
+  "uuid": "ef816018-727f-4229-b6a8-0b1b54ce0668",
+  "importer": "texture",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "genMipmaps": false,
+  "packable": true,
+  "width": 512,
+  "height": 256,
+  "platformSettings": {},
+  "subMetas": {
+    "WhiteNight2 Layer 01": {
+      "ver": "1.0.6",
+      "uuid": "d907f464-8135-4ff3-9b59-a41fbe6cc5c5",
+      "importer": "sprite-frame",
+      "rawTextureUuid": "ef816018-727f-4229-b6a8-0b1b54ce0668",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 512,
+      "height": 256,
+      "rawWidth": 512,
+      "rawHeight": 256,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

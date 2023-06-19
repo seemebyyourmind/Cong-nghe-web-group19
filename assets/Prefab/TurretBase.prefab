@@ -13,7 +13,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "TurretBase",
+    "_name": "TurretBase copy",
     "_objFlags": 0,
     "_parent": null,
     "_children": [
@@ -55,8 +55,8 @@
       "__type__": "TypedArray",
       "ctor": "Float64Array",
       "array": [
-        653.569,
-        115.254,
+        625.524,
+        119.847,
         0,
         0,
         0,

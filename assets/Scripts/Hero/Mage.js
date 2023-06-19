@@ -35,9 +35,9 @@ cc.Class({
     spawnBullet(){
         if (this.getTarget() != null){
             const bullet = cc.instantiate(this.bulletPrefab);
-        const parentNode = cc.director.getScene();
-        bullet.setParent(parentNode);
-        bullet.getComponent('Thunder_Mage').onInit(this.target, this.physicDMG + this.magicDMG);
+            const parentNode = cc.director.getScene();
+            bullet.setParent(parentNode);
+            bullet.getComponent('Thunder_Mage').onInit(this.getTarget(), this.physicDMG + this.magicDMG);
         }   
     },
 

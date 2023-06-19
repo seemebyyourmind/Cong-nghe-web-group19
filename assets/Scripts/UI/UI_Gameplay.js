@@ -42,6 +42,7 @@ cc.Class({
 
         this.castle = LevelController.instance.curLevel.getComponent('GameLevel').castle.getComponent('Castle');
         this.setTowerLifeBar(this.castle.currentHP, this.castle.maxHP);
+        this.setCoinAmount(GameDataManager.instance.coinAmount);
     },
 
     chooseTowerSkill(index){
@@ -73,6 +74,9 @@ cc.Class({
     update(){
         if (this.castle){
             this.setTowerLifeBar(this.castle.currentHP, this.castle.maxHP);
+            if (this.castle.currentHP <= 0){
+                LevelController.instance.loseLevel();
+            }
         }
 
         this.setUpgradeBar();
@@ -81,6 +85,7 @@ cc.Class({
     setTowerLifeBar(curValue, maxValue){
         this.towerLifeBar.progress = curValue / maxValue;
         this.towerLifeText.string = curValue + "/" + maxValue;
+        
     },
 
     setCoinAmount(value){

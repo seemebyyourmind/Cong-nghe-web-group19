@@ -133,10 +133,14 @@
     "levelList": [
       {
         "__uuid__": "f0d9ec83-ba02-45ed-be31-05a48e4c2a3c"
+      },
+      {
+        "__uuid__": "3fa1abb9-ad6f-4c30-abce-2c81db656de3"
       }
     ],
     "curLvIndex": 0,
     "curLevel": null,
+    "curLvProgress": 0,
     "_id": "8feJAIUtJG4YanGCepPJqU"
   }
 ]

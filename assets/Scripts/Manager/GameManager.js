@@ -20,8 +20,7 @@ const GameManager = new cc.Class({
     
     onLoad: function() {
         cc.game.addPersistRootNode(this.node);
-        GameManager.instance = this;
-        
+        GameManager.instance = this;       
     },
 
     pauseGame(){

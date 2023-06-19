@@ -1,0 +1,38 @@
+{
+  "ver": "2.3.7",
+  "uuid": "e6fdc684-84ea-4d47-831d-d78de2a62fdf",
+  "importer": "texture",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "genMipmaps": false,
+  "packable": true,
+  "width": 512,
+  "height": 256,
+  "platformSettings": {},
+  "subMetas": {
+    "Moon lake": {
+      "ver": "1.0.6",
+      "uuid": "6f5bc516-56c0-443e-ae98-367c0c401266",
+      "importer": "sprite-frame",
+      "rawTextureUuid": "e6fdc684-84ea-4d47-831d-d78de2a62fdf",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 512,
+      "height": 256,
+      "rawWidth": 512,
+      "rawHeight": 256,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

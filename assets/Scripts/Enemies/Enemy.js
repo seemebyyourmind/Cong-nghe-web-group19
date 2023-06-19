@@ -82,7 +82,7 @@ var Enemy = cc.Class({
         }
         GameDataManager.instance.coinAmount += this.coinValue;
         GameManager.instance.gameplayUI.setCoinAmount(GameDataManager.instance.coinAmount);
-
+        LevelController.instance.increaseProgress();
         GameManager.instance.gameplayUI.upgradeCurrentValue++;
         this.node.destroy();
     },
