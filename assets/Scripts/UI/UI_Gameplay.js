@@ -25,7 +25,6 @@ const UI_Gameplay = cc.Class({
         upgradeBar: cc.ProgressBar,
         upgradeMaxValue: cc.Float,
         upgradeCurrentValue: cc.Float,
-
     },
 
     // LIFE-CYCLE CALLBACKS:
@@ -44,10 +43,6 @@ const UI_Gameplay = cc.Class({
         this.refreshUpgrade();
 
         this.setCoinAmount(GameDataManager.instance.coinAmount);
-    },
-
-    start(){
-
     },
 
     chooseTowerSkill(index){
@@ -79,9 +74,6 @@ const UI_Gameplay = cc.Class({
     update(){
         if (this.castle){
             this.setTowerLifeBar();
-            if (this.castle.currentHP <= 0){
-                LevelController.instance.loseLevel();
-            }
         }
 
         this.setUpgradeBar();

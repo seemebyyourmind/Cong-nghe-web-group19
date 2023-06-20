@@ -1,4 +1,4 @@
-
+import LevelController from 'LevelController';
 
 const Castle = cc.Class({
     extends: cc.Component,
@@ -13,6 +13,9 @@ const Castle = cc.Class({
             let enemy = other.getComponent('Enemy');
             this.currentHP -= enemy.damage;
             enemy.onDespawn();
+            if (this.currentHP <= 0){
+                LevelController.instance.loseLevel();
+            }
         }
     },
 });

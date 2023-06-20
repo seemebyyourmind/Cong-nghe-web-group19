@@ -79,7 +79,6 @@ const LevelController = cc.Class({
     loseLevel(){
         setTimeout(function() {
             UIManager.instance.openUILose();
-            cc.director.pause();
         }, 3000); 
     },
 
