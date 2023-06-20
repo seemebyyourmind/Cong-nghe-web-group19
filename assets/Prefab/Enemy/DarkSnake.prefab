@@ -13,7 +13,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "Scorpion",
+    "_name": "DarkSnake",
     "_objFlags": 0,
     "_parent": null,
     "_children": [
@@ -52,8 +52,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 25,
-      "height": 20
+      "width": 31,
+      "height": 28
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -64,8 +64,8 @@
       "__type__": "TypedArray",
       "ctor": "Float64Array",
       "array": [
-        0,
-        0,
+        175,
+        106,
         0,
         0,
         0,
@@ -85,8 +85,8 @@
     "_skewX": 0,
     "_skewY": 0,
     "_is3DNode": false,
-    "_groupIndex": 1,
-    "groupIndex": 1,
+    "_groupIndex": 0,
+    "groupIndex": 0,
     "_id": ""
   },
   {
@@ -123,7 +123,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 40,
+      "width": 50,
       "height": 5
     },
     "_anchorPoint": {
@@ -136,7 +136,7 @@
       "ctor": "Float64Array",
       "array": [
         0,
-        16.702,
+        30,
         0,
         0,
         0,
@@ -187,7 +187,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 40,
+      "width": 50,
       "height": 5
     },
     "_anchorPoint": {
@@ -199,7 +199,7 @@
       "__type__": "TypedArray",
       "ctor": "Float64Array",
       "array": [
-        -20,
+        -25,
         0,
         0,
         0,
@@ -264,7 +264,7 @@
     "asset": {
       "__id__": 0
     },
-    "fileId": "5f4XHGHcdN8JxqMrKRU25v",
+    "fileId": "30OunR6VtKMIwJX8w2qeKH",
     "sync": false
   },
   {
@@ -307,7 +307,7 @@
       "__id__": 2
     },
     "_enabled": true,
-    "_N$totalLength": 40,
+    "_N$totalLength": 50,
     "_N$barSprite": {
       "__id__": 4
     },
@@ -324,7 +324,7 @@
     "asset": {
       "__id__": 0
     },
-    "fileId": "0bHXM5V2xBH5/B56PhiOP8",
+    "fileId": "b1thZXtf1ET5AkflH6TO22",
     "sync": false
   },
   {
@@ -343,10 +343,10 @@
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
     "_spriteFrame": {
-      "__uuid__": "dcfbc6ae-02a0-4a81-9a0e-7eecb6373465"
+      "__uuid__": "c4c67e87-6ca3-4f01-b46c-c7cf65274150"
     },
     "_type": 0,
-    "_sizeMode": 0,
+    "_sizeMode": 1,
     "_fillType": 0,
     "_fillCenter": {
       "__type__": "cc.Vec2",
@@ -368,39 +368,14 @@
     },
     "_enabled": true,
     "_defaultClip": {
-      "__uuid__": "ddc77228-f10f-49c5-998d-76d907c3fa21"
+      "__uuid__": "3e60cc8f-1223-40ec-9056-007719c32e37"
     },
     "_clips": [
       {
-        "__uuid__": "ddc77228-f10f-49c5-998d-76d907c3fa21"
+        "__uuid__": "3e60cc8f-1223-40ec-9056-007719c32e37"
       }
     ],
     "playOnLoad": true,
-    "_id": ""
-  },
-  {
-    "__type__": "a81e34rdb1H8IpxdrfGZcAb",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 1
-    },
-    "_enabled": true,
-    "speed": 1,
-    "health": 500,
-    "damage": 10,
-    "curLv": null,
-    "coinValue": 10,
-    "path": [],
-    "pathIdx": 0,
-    "isFreeze": false,
-    "freezeTime": 0,
-    "freezePrefab": {
-      "__uuid__": "79786277-06bc-4502-a92e-7c5e74d2a1ac"
-    },
-    "healthBar": {
-      "__id__": 7
-    },
     "_id": ""
   },
   {
@@ -413,7 +388,7 @@
     "_enabled": true,
     "_type": 2,
     "_allowSleep": true,
-    "_gravityScale": 0,
+    "_gravityScale": 1,
     "_linearDamping": 0,
     "_angularDamping": 0,
     "_linearVelocity": {
@@ -422,7 +397,7 @@
       "y": 0
     },
     "_angularVelocity": 0,
-    "_fixedRotation": true,
+    "_fixedRotation": false,
     "enabledContactListener": true,
     "bullet": false,
     "awakeOnLoad": true,
@@ -439,13 +414,38 @@
     "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
-      "x": 0.2,
-      "y": 0.3
+      "x": 3.7,
+      "y": 0.5
     },
     "_size": {
       "__type__": "cc.Size",
-      "width": 15.6,
-      "height": 10
+      "width": 14.3,
+      "height": 18.2
+    },
+    "_id": ""
+  },
+  {
+    "__type__": "b05686/uoFH84OSaIiGXTjF",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 1
+    },
+    "_enabled": true,
+    "speed": 1.2,
+    "health": 400,
+    "damage": 10,
+    "curLv": null,
+    "coinValue": 0,
+    "path": [],
+    "pathIdx": 0,
+    "isFreeze": false,
+    "freezeTime": 0,
+    "freezePrefab": {
+      "__uuid__": "79786277-06bc-4502-a92e-7c5e74d2a1ac"
+    },
+    "healthBar": {
+      "__id__": 7
     },
     "_id": ""
   },

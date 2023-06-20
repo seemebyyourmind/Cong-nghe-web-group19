@@ -1,0 +1,61 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "DesertMonsRun",
+  "_objFlags": 0,
+  "_native": "",
+  "_duration": 0.9666666666666667,
+  "sample": 60,
+  "speed": 1,
+  "wrapMode": 2,
+  "curveData": {
+    "comps": {
+      "cc.Sprite": {
+        "spriteFrame": [
+          {
+            "frame": 0,
+            "value": {
+              "__uuid__": "514aebc9-5f9c-4942-8e07-390956e7411b"
+            }
+          },
+          {
+            "frame": 0.16666666666666666,
+            "value": {
+              "__uuid__": "467e56c2-70ab-4717-9f2d-b8cea1afd084"
+            }
+          },
+          {
+            "frame": 0.3333333333333333,
+            "value": {
+              "__uuid__": "286d2931-68ab-4e4a-8f34-33ce24133097"
+            }
+          },
+          {
+            "frame": 0.5,
+            "value": {
+              "__uuid__": "5eeeaacf-5e0e-4823-9183-8f3b4e522f3e"
+            }
+          },
+          {
+            "frame": 0.6666666666666666,
+            "value": {
+              "__uuid__": "1df1b2eb-fd39-4c91-a1f4-9d48783ecd7c"
+            }
+          },
+          {
+            "frame": 0.8333333333333334,
+            "value": {
+              "__uuid__": "5b09f856-2ac9-42b6-af73-d6fbb5f8dc15"
+            }
+          },
+          {
+            "frame": 0.95,
+            "value": {
+              "__uuid__": "5b09f856-2ac9-42b6-af73-d6fbb5f8dc15"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "events": []
+}

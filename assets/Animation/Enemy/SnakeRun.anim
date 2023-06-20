@@ -1,0 +1,55 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "SnakeRun",
+  "_objFlags": 0,
+  "_native": "",
+  "_duration": 0.85,
+  "sample": 60,
+  "speed": 1,
+  "wrapMode": 2,
+  "curveData": {
+    "comps": {
+      "cc.Sprite": {
+        "spriteFrame": [
+          {
+            "frame": 0,
+            "value": {
+              "__uuid__": "c4c67e87-6ca3-4f01-b46c-c7cf65274150"
+            }
+          },
+          {
+            "frame": 0.16666666666666666,
+            "value": {
+              "__uuid__": "ff43a5f8-ae81-4dba-a63c-8a54420ee2c9"
+            }
+          },
+          {
+            "frame": 0.3333333333333333,
+            "value": {
+              "__uuid__": "15c51bf0-1b9f-40e1-9991-ce17f87a214a"
+            }
+          },
+          {
+            "frame": 0.5,
+            "value": {
+              "__uuid__": "11fe2bd8-5a35-4311-89de-0b034ae0ad97"
+            }
+          },
+          {
+            "frame": 0.6666666666666666,
+            "value": {
+              "__uuid__": "d24421da-b49f-4678-a2b5-7192b4823e95"
+            }
+          },
+          {
+            "frame": 0.8333333333333334,
+            "value": {
+              "__uuid__": "23a381f3-fcb5-4d06-8107-bbf4f4bce623"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "events": []
+}
