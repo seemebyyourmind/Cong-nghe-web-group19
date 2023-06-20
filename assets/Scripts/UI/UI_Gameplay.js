@@ -25,6 +25,8 @@ const UI_Gameplay = cc.Class({
         upgradeBar: cc.ProgressBar,
         upgradeMaxValue: cc.Float,
         upgradeCurrentValue: cc.Float,
+
+        confirmPanel: cc.Node,
     },
 
     // LIFE-CYCLE CALLBACKS:
@@ -128,5 +130,21 @@ const UI_Gameplay = cc.Class({
         for (var i = 0; i < children.length; i++) {
             this.findNodesByType(children[i], targetType, result);
         }
+    },
+
+    clickHomeBtn(){
+        this.confirmPanel.active = true;
+        cc.director.pause();
+    },
+
+    clickYes(){
+        this.confirmPanel.active = false;
+        cc.director.resume();
+        UIManager.instance.openUIMainMenu();
+    },
+
+    clickNo(){
+        this.confirmPanel.active = false;
+        cc.director.resume();
     }
 });

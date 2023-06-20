@@ -9,6 +9,7 @@ const GameLevel = cc.Class({
         castle: cc.Node,
         maxProgress: cc.Float,
         levelBG: cc.SpriteFrame,
+        levelName: cc.String,
 
         spawning: [],
         spawnedAmount: [],
