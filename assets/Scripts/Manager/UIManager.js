@@ -93,5 +93,15 @@ const UIManager = cc.Class({
         this.uiWin.active = false;
         this.uiSelectLevel.active = true;
         this.uiLoading.active = false;
-    }
+    },
+
+        openUIStore(){
+        this.uiMainMenu.active = false;
+        this.uiGameplay.active = false;
+        this.uiHeroDetail.active = true;
+        this.uiLose.active = false;
+        this.uiLoading.active = false;
+        this.uiWin.active = false;
+        this.uiSelectLevel.active = false;
+    },
 });

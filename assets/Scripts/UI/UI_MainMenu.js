@@ -24,5 +24,9 @@ cc.Class({
 
     clickHero(){
         UIManager.instance.openUIHeroDetail();
+    },
+
+    clickStore() {
+        UIManager.instance.openUIStore();
     }
 });
