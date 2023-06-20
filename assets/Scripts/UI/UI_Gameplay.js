@@ -1,9 +1,10 @@
 import GameDataManager from 'GameDataManager';
 import LevelController from 'LevelController';
 import Upgrade from 'Upgrade';
-import GameManager from 'GameManager';
+import GameManager from '../Manager/GameManager.js';
+import UIManager from 'UIManager';
 
-cc.Class({
+const UI_Gameplay = cc.Class({
     extends: cc.Component,
 
     properties: {
@@ -37,12 +38,16 @@ cc.Class({
             this.upgradeList.push(upgrade);
         }
 
+        console.log(GameManager.instance);
+
         this.upgradeCurrentValue = 0;
         this.refreshUpgrade();
 
-        this.castle = LevelController.instance.curLevel.getComponent('GameLevel').castle.getComponent('Castle');
-        this.setTowerLifeBar(this.castle.currentHP, this.castle.maxHP);
         this.setCoinAmount(GameDataManager.instance.coinAmount);
+    },
+
+    start(){
+
     },
 
     chooseTowerSkill(index){
@@ -73,7 +78,7 @@ cc.Class({
 
     update(){
         if (this.castle){
-            this.setTowerLifeBar(this.castle.currentHP, this.castle.maxHP);
+            this.setTowerLifeBar();
             if (this.castle.currentHP <= 0){
                 LevelController.instance.loseLevel();
             }
@@ -82,9 +87,9 @@ cc.Class({
         this.setUpgradeBar();
     },
 
-    setTowerLifeBar(curValue, maxValue){
-        this.towerLifeBar.progress = curValue / maxValue;
-        this.towerLifeText.string = curValue + "/" + maxValue;
+    setTowerLifeBar(){
+        this.towerLifeBar.progress = this.castle.currentHP / this.castle.maxHP;
+        this.towerLifeText.string = this.castle.currentHP + "/" + this.castle.maxHP;
     },
 
     setCoinAmount(value){
@@ -116,6 +121,20 @@ cc.Class({
             this.refreshUpgrade();
             this.upgradePanel.active = true;
             cc.director.pause();
+        }
+    },
+
+    findNodesByType(node, targetType, result) {
+        // Check if the current node is of the desired type
+        if (node != cc.director.getScene() && node.getComponent(targetType)) {
+            console.log("Found");
+            result.push(node);
+        }
+    
+        // Recursively check child nodes
+        var children = node.children;
+        for (var i = 0; i < children.length; i++) {
+            this.findNodesByType(children[i], targetType, result);
         }
     }
 });

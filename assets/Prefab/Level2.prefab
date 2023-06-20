@@ -12167,6 +12167,9 @@
       "__id__": 321
     },
     "maxProgress": 75,
+    "levelBG": {
+      "__uuid__": "42c43ab3-f184-48c5-b114-280f10f8333b"
+    },
     "spawning": [],
     "spawnedAmount": [],
     "spawningID": [],

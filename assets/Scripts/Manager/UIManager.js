@@ -1,9 +1,3 @@
-// Learn cc.Class:
-//  - https://docs.cocos.com/creator/manual/en/scripting/class.html
-// Learn Attribute:
-//  - https://docs.cocos.com/creator/manual/en/scripting/reference/attributes.html
-// Learn life-cycle callbacks:
-//  - https://docs.cocos.com/creator/manual/en/scripting/life-cycle-callbacks.html
 
 const UIManager = cc.Class({
     extends: cc.Component,
@@ -11,6 +5,7 @@ const UIManager = cc.Class({
     properties: {
         uiGameplay: cc.Node,
         uiMainMenu: cc.Node,
+        uiSelectLevel: cc.Node,
         uiHeroDetail: cc.Node,
         uiLose: cc.Node,
         uiWin: cc.Node,
@@ -37,6 +32,7 @@ const UIManager = cc.Class({
         this.uiLose.active = false;
         this.uiWin.active = false;
         this.uiLoading.active = false;
+        this.uiSelectLevel.active = false;
     },
 
     openUIMainMenu(){
@@ -46,6 +42,7 @@ const UIManager = cc.Class({
         this.uiLose.active = false;
         this.uiWin.active = false;
         this.uiLoading.active = false;
+        this.uiSelectLevel.active = false;
     },
 
     openUIHeroDetail(){
@@ -55,6 +52,7 @@ const UIManager = cc.Class({
         this.uiLose.active = false;
         this.uiLoading.active = false;
         this.uiWin.active = false;
+        this.uiSelectLevel.active = false;
     },
 
     openUILose(){
@@ -64,6 +62,7 @@ const UIManager = cc.Class({
         this.uiLose.active = true;
         this.uiWin.active = false;
         this.uiLoading.active = false;
+        this.uiSelectLevel.active = false;
     },
 
     openUIWin(){
@@ -72,6 +71,7 @@ const UIManager = cc.Class({
         this.uiHeroDetail.active = false;
         this.uiLose.active = false;
         this.uiWin.active = true;
+        this.uiSelectLevel.active = false;
         this.uiLoading.active = false;
     },
 
@@ -81,8 +81,17 @@ const UIManager = cc.Class({
         this.uiHeroDetail.active = false;
         this.uiLose.active = false;
         this.uiWin.active = false;
+        this.uiSelectLevel.active = false;
         this.uiLoading.active = true;
+    },
+
+    openUISelectLevel(){
+        this.uiMainMenu.active = false;
+        this.uiGameplay.active = false;
+        this.uiHeroDetail.active = false;
+        this.uiLose.active = false;
+        this.uiWin.active = false;
+        this.uiSelectLevel.active = true;
+        this.uiLoading.active = false;
     }
-
-
 });

@@ -1,5 +1,3 @@
-
-import LevelController from 'LevelController';
 import UIManager from 'UIManager';
 
 cc.Class({
@@ -18,7 +16,7 @@ cc.Class({
     },
 
     clickPlay(){
-        cc.director.loadScene('GameplayScene');
+        UIManager.instance.openUISelectLevel();
     },
 
     clickHero(){

@@ -1,15 +1,12 @@
 import UIManager from 'UIManager';
-import GameLevel from 'GameLevel.js';
+import GameManager from 'GameManager';
 import GameDataManager from 'GameDataManager';
 
-var LevelController = cc.Class({
+const LevelController = cc.Class({
     extends: cc.Component,
 
     properties: {
-        levelList:{
-            default: [],
-            type: cc.Prefab,
-        },
+        levelList: [cc.Prefab],
         curLvIndex: 0,
 
         curLevel: cc.Node,
@@ -23,18 +20,12 @@ var LevelController = cc.Class({
 
     // LIFE-CYCLE CALLBACKS:
 
-    
-    
     onLoad() {
-        LevelController.instance = this;       
-        this.curLvIndex = 0;
+        LevelController.instance = this;      
+
+        this.curLvIndex = GameManager.instance.selectedLevelID;
         this.loadLevel(this.curLvIndex);
     },
-
-    start () {
-        
-    },
-
 
     // update (dt) {},
 
@@ -44,15 +35,21 @@ var LevelController = cc.Class({
         if (this.curLevel){
             this.curLevel.destroy();
         }
+
         this.curLevel = cc.instantiate(this.levelList[index]);
         this.curLevel.parent = this.node;
         this.curLvProgress = 0;
-        console.log("Max :" + this.curLevel.getComponent('GameLevel').maxProgress);
+        GameManager.instance.gameplayUI.castle = this.curLevel.getComponent('GameLevel').castle.getComponent('Castle');
+        GameManager.instance.gameplayUI.setTowerLifeBar();
         UIManager.instance.openUILoading();
-        setTimeout(this.startLevel, 500);
+        
+        setTimeout(() => {
+            this.startLevel();
+        }, 500);
     },
 
     startLevel(){
+        console.log(this.curLevel);
         console.log("Progress :" + this.curLvProgress);
         GameDataManager.instance.coinAmount = 1000;
         UIManager.instance.openUIGameplay();
@@ -90,6 +87,4 @@ var LevelController = cc.Class({
         UIManager.instance.openUIWin();
         cc.director.pause();
     }
-
-
 });

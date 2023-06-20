@@ -36,7 +36,8 @@ cc.Class({
         const skill = cc.instantiate(this.skill);
         const parentNode = LevelController.instance.curLevel;
         skill.setParent(parentNode);
-        skill.getComponent('WarriorSkill').onInit(target, 1.5 * this.magicDMG, this.freezeTime);
         skill.position = cc.v2(this.node.parent.position.x, this.node.parent.position.y);
+        skill.getComponent('WarriorSkill').onInit(target, 1.5 * this.magicDMG, this.freezeTime);
+        
     },
 });

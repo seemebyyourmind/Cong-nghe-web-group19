@@ -1,16 +1,13 @@
-
-import Hero from 'Hero';
 import UI_Gameplay from 'UI_Gameplay';
 
-const GameManager = new cc.Class({
+const GameManager = cc.Class({
     extends: cc.Component,
 
     properties: {
         heroList: [cc.Prefab],
         gameplayUI: UI_Gameplay,
+        selectedLevelID: cc.Float,
     },
-
-    
 
     // LIFE-CYCLE CALLBACKS:
 
@@ -18,9 +15,9 @@ const GameManager = new cc.Class({
         instance: null,
     },
     
-    onLoad: function() {
-        cc.game.addPersistRootNode(this.node);
+    onLoad() {   
         GameManager.instance = this;       
+        cc.game.addPersistRootNode(this.node);
     },
 
     pauseGame(){
@@ -29,5 +26,6 @@ const GameManager = new cc.Class({
 
     resumeGame(){
         cc.director.resume();
-    }
+    },
+
 });

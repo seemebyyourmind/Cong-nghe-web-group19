@@ -8,6 +8,7 @@ const GameLevel = cc.Class({
         Waves: [EnemyWave],
         castle: cc.Node,
         maxProgress: cc.Float,
+        levelBG: cc.SpriteFrame,
 
         spawning: [],
         spawnedAmount: [],
@@ -20,7 +21,6 @@ const GameLevel = cc.Class({
 
     start () {
         this.playtime = 0;
-        console.log(this.Waves[0]);
         for (var i = 0; i < this.Waves.length; i++){
             this.spawning[i] = false;
             this.spawnedAmount[i] = 0;
