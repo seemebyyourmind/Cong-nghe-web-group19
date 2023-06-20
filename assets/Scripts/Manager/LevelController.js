@@ -45,7 +45,7 @@ const LevelController = cc.Class({
         
         setTimeout(() => {
             this.startLevel();
-        }, 500);
+        }, 700);
     },
 
     startLevel(){
@@ -84,6 +84,7 @@ const LevelController = cc.Class({
 
     winLevel(){
         UIManager.instance.openUIWin();
+        GameManager.instance.levelUnlocked = (this.curLvIndex + 1 > GameManager.instance.levelUnlocked) ? this.curLvIndex + 1 : GameManager.instance.levelUnlocked;
         cc.director.pause();
     }
 });

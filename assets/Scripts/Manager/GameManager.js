@@ -7,6 +7,7 @@ const GameManager = cc.Class({
         heroList: [cc.Prefab],
         gameplayUI: UI_Gameplay,
         selectedLevelID: cc.Float,
+        levelUnlocked: cc.Float,
     },
 
     // LIFE-CYCLE CALLBACKS:

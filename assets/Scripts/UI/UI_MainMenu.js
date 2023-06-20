@@ -1,4 +1,5 @@
 import UIManager from 'UIManager';
+import LevelController from 'LevelController';
 
 cc.Class({
     extends: cc.Component,
@@ -11,8 +12,10 @@ cc.Class({
 
     // onLoad () {},
 
-    start () {
-
+    onEnable(){
+        if (LevelController.instance != null){
+            LevelController.instance.quitLevel();
+        }
     },
 
     clickPlay(){

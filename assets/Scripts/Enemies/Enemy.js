@@ -89,7 +89,7 @@ var Enemy = cc.Class({
     setFreeze(freezeTime){
         if (!this.isFreeze){
             this.freeze = cc.instantiate(this.freezePrefab);
-            const parentNode = cc.director.getScene();
+            const parentNode = this.node.parent;
             this.freeze.setParent(parentNode);
             this.freeze.position = this.node.position;
         }
