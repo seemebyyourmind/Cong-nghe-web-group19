@@ -424,7 +424,7 @@
         "__id__": 33
       }
     ],
-    "_active": false,
+    "_active": true,
     "_components": [
       {
         "__id__": 41
@@ -10002,7 +10002,7 @@
         "__id__": 324
       }
     ],
-    "_active": true,
+    "_active": false,
     "_components": [
       {
         "__id__": 413
@@ -26981,7 +26981,7 @@
       "__id__": 209
     },
     "selectedLevelID": 0,
-    "levelUnlocked": 0,
+    "levelUnlocked": 3,
     "_id": "43oO0qcLRB0YRwflXcqmxm"
   }
 ]
