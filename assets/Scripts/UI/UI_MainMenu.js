@@ -5,7 +5,8 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
-        
+        infoScreen: cc.Node,
+        userScreen: cc.Node,
     },
 
     // LIFE-CYCLE CALLBACKS:
@@ -28,5 +29,15 @@ cc.Class({
 
     clickStore() {
         UIManager.instance.openUIStore();
+    },
+
+    openUserScreen(){
+        this.infoScreen.active = false;
+        this.userScreen.active = true;
+    },
+
+    openInfoScreen(){
+        this.infoScreen.active = true;
+        this.userScreen.active = false;
     }
 });

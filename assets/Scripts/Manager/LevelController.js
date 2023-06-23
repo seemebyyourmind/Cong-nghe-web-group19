@@ -7,7 +7,7 @@ const LevelController = cc.Class({
 
     properties: {
         levelList: [cc.Prefab],
-        curLvIndex: 0,
+        curLvIndex: cc.Float,
 
         curLevel: cc.Node,
 
@@ -84,7 +84,9 @@ const LevelController = cc.Class({
 
     winLevel(){
         UIManager.instance.openUIWin();
-        GameManager.instance.levelUnlocked = (this.curLvIndex + 1 > GameManager.instance.levelUnlocked) ? this.curLvIndex + 1 : GameManager.instance.levelUnlocked;
+        GameDataManager.instance.levelUnlocked = (this.curLvIndex + 2 > GameDataManager.instance.levelUnlocked) ? (this.curLvIndex + 2) : GameDataManager.instance.levelUnlocked;
+        console.log(this.curLvIndex + 2);
+        console.log(GameDataManager.instance.levelUnlocked);
         cc.director.pause();
     }
 });

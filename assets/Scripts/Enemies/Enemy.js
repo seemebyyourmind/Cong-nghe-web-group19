@@ -21,9 +21,11 @@ var Enemy = cc.Class({
         freezePrefab: cc.Prefab,
 
         healthBar: cc.ProgressBar,
+        isAlive: cc.Boolean,
     },
 
     onSpawn (path){
+        this.isAlive = true;
         this.path = path.pathNode;
         this.pathIdx = 0;
         this.node.position = this.path[0].position;
@@ -70,20 +72,24 @@ var Enemy = cc.Class({
     getDamage(damage){
         this.curHealth -= damage;
         this.healthBar.progress = this.curHealth / this.health;
-        if (this.curHealth <= 0){
+        if (this.curHealth <= 0 && this.isAlive){
+            this.isAlive = false;
             this.onDespawn();
         }
     },
 
     onDespawn(){
-        if (this.isFreeze){
-            this.freeze.destroy();
+        if (this.isAlive){
+            if (this.isFreeze){
+                this.freeze.destroy();
+            }
+            GameDataManager.instance.coinAmount += this.coinValue;
+            GameManager.instance.gameplayUI.setCoinAmount(GameDataManager.instance.coinAmount);
+            LevelController.instance.increaseProgress();
+            GameManager.instance.gameplayUI.upgradeCurrentValue++;
+            this.node.destroy();
         }
-        GameDataManager.instance.coinAmount += this.coinValue;
-        GameManager.instance.gameplayUI.setCoinAmount(GameDataManager.instance.coinAmount);
-        LevelController.instance.increaseProgress();
-        GameManager.instance.gameplayUI.upgradeCurrentValue++;
-        this.node.destroy();
+        
     },
 
     setFreeze(freezeTime){

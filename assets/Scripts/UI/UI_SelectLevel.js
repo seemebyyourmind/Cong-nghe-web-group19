@@ -1,5 +1,6 @@
-import GameManager from 'GameManager';
+import GameDataManager from 'GameDataManager';
 import UIManager from 'UIManager';
+import GameManager from 'GameManager';
 
 cc.Class({
     extends: cc.Component,
@@ -16,8 +17,8 @@ cc.Class({
     // LIFE-CYCLE CALLBACKS:
 
     onEnable(){
-        console.log("Enable");
-        for (var i = 0; i <= GameManager.instance.levelUnlocked; i++){
+        console.log(GameDataManager.instance.levelUnlocked);
+        for (var i = 0; i < GameDataManager.instance.levelUnlocked; i++){
             this.levelBtn[i].interactable = true;
             console.log(i);
         }
@@ -28,9 +29,7 @@ cc.Class({
             button.node.on(cc.Node.EventType.TOUCH_END, () => {
                 this.previewLevel(index);
             }, this);
-        });
-
-        
+        });      
     },
 
     previewLevel(index){

@@ -8327,7 +8327,9 @@
       "__uuid__": "aa2a45fd-bab5-4547-ae8e-681b2a198ee7"
     },
     "amount": 20,
-    "path": null,
+    "path": {
+      "__id__": 220
+    },
     "startTime": 55,
     "spawnRate": 0.9
   },
