@@ -84,9 +84,9 @@ const LevelController = cc.Class({
 
     winLevel(){
         UIManager.instance.openUIWin();
-        GameDataManager.instance.levelUnlocked = (this.curLvIndex + 2 > GameDataManager.instance.levelUnlocked) ? (this.curLvIndex + 2) : GameDataManager.instance.levelUnlocked;
-        console.log(this.curLvIndex + 2);
-        console.log(GameDataManager.instance.levelUnlocked);
+        GameDataManager.instance.levelUnlocked = (LevelController.instance.curLvIndex + 2 > GameDataManager.instance.levelUnlocked) ? (LevelController.instance.curLvIndex + 2) : GameDataManager.instance.levelUnlocked;
+        console.log(LevelController.instance.curLvIndex + 2);
+        GameDataManager.instance.saveData();
         cc.director.pause();
     }
 });

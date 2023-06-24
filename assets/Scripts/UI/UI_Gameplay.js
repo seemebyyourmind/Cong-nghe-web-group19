@@ -1,7 +1,5 @@
 import GameDataManager from 'GameDataManager';
-import LevelController from 'LevelController';
 import Upgrade from 'Upgrade';
-import GameManager from '../Manager/GameManager.js';
 import UIManager from 'UIManager';
 
 const UI_Gameplay = cc.Class({
@@ -39,8 +37,6 @@ const UI_Gameplay = cc.Class({
             this.upgradeList.push(upgrade);
         }
 
-        console.log(GameManager.instance);
-
         this.upgradeCurrentValue = 0;
         this.refreshUpgrade();
 
@@ -74,7 +70,7 @@ const UI_Gameplay = cc.Class({
     },
 
     update(){
-        if (this.castle){
+        if (this.castle.currentHP >= 0){
             this.setTowerLifeBar();
         }
 

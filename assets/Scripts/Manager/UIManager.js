@@ -1,3 +1,4 @@
+import MessagePanel from 'MessagePanel';
 
 const UIManager = cc.Class({
     extends: cc.Component,
@@ -10,6 +11,7 @@ const UIManager = cc.Class({
         uiLose: cc.Node,
         uiWin: cc.Node,
         uiLoading: cc.Node,
+        messagePanel: MessagePanel,
     },
 
     // LIFE-CYCLE CALLBACKS:
@@ -95,7 +97,7 @@ const UIManager = cc.Class({
         this.uiLoading.active = false;
     },
 
-        openUIStore(){
+    openUIStore(){
         this.uiMainMenu.active = false;
         this.uiGameplay.active = false;
         this.uiHeroDetail.active = true;
@@ -104,4 +106,8 @@ const UIManager = cc.Class({
         this.uiWin.active = false;
         this.uiSelectLevel.active = false;
     },
+
+    openMessagePanel(message, state){
+        this.messagePanel.onOpen(message, state);
+    }
 });

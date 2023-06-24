@@ -5,6 +5,7 @@ const GameDataManager = cc.Class({
 
     properties: {
         coinAmount: 1000,
+        currentUsername: cc.String,
         levelUnlocked: 0,
     },
 
@@ -18,7 +19,9 @@ const GameDataManager = cc.Class({
 
     login(username, password) {
 
+        //var url = 'https://webgame19.000webhostapp.com/gameserver.php';
         var url = 'http://localhost/gameserver.php';
+
 
         var xhr = new XMLHttpRequest();
         xhr.open('POST', url, true);
@@ -27,16 +30,16 @@ const GameDataManager = cc.Class({
         xhr.onreadystatechange = function () {
             if (xhr.readyState === 4 && xhr.status === 200) {
                 var response = xhr.responseText;
-                console.log(response);
+
                 if (response == -1){
-                    alert("Wrong username or password!");
+                    UIManager.instance.openMessagePanel("Username or Password incorrect!", false);
                 }else{
                     // Process the response data
-                    alert("Login successfully!");
+                    UIManager.instance.openMessagePanel("Login successfully!", true);
                     var jsonText = JSON.parse(response);
-                    
-                    console.log(jsonText.level_unlocked);
+
                     GameDataManager.instance.levelUnlocked = jsonText.level_unlocked;
+                    GameDataManager.instance.currentUsername = username;
                     UIManager.instance.uiMainMenu.getComponent('UI_MainMenu').openUserScreen();
                 }
             }
@@ -49,6 +52,7 @@ const GameDataManager = cc.Class({
     },
 
     signup(username, password){
+        //var url = 'https://webgame19.000webhostapp.com/gameserver.php';
         var url = 'http://localhost/gameserver.php';
 
         var xhr = new XMLHttpRequest();
@@ -59,10 +63,11 @@ const GameDataManager = cc.Class({
             if (xhr.readyState === 4 && xhr.status === 200) {
                 var response = xhr.responseText;
                 if (response == -1){
-                    alert("Username already taken!");
+                    UIManager.instance.openMessagePanel("Username already taken!", false);
                 }else{
-                    alert("Signup successfully");
+                    UIManager.instance.openMessagePanel("Signup successfully!", true);
                     GameDataManager.instance.levelUnlocked = 1;
+                    GameDataManager.instance.currentUsername = username;
                     UIManager.instance.uiMainMenu.getComponent('UI_MainMenu').openUserScreen();
                 }              
             }
@@ -72,6 +77,23 @@ const GameDataManager = cc.Class({
         var data = 'username=' + encodeURIComponent(username) + '&password=' + encodeURIComponent(password) + '&request=' + encodeURIComponent(request);
 
         xhr.send(data);
+    },
+
+    saveData(){
+        //var url = 'https://webgame19.000webhostapp.com/gameserver.php';
+        var url = 'http://localhost/gameserver.php';
+
+
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', url, true);
+        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+
+        var request = 'save';
+        var data = 'username=' + encodeURIComponent(GameDataManager.instance.currentUsername) + '&request=' + encodeURIComponent(request) + '&value=' + encodeURIComponent(GameDataManager.instance.levelUnlocked);
+
+        xhr.send(data);
     }
     
 });
+
+

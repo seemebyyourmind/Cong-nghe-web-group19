@@ -1,4 +1,5 @@
 import GameDataManager from 'GameDataManager';
+import UIManager from 'UIManager';
 
 cc.Class({
     extends: cc.Component,
@@ -15,8 +16,8 @@ cc.Class({
     },
 
     clickLogin(){
-        let username = this.loginUserName.string;
-        let password = this.loginPassword.string;
+        let username = this.loginUserName.string.trim();
+        let password = this.loginPassword.string.trim();
 
         GameDataManager.instance.login(username, password);
     },
@@ -31,13 +32,18 @@ cc.Class({
         let password = this.signupPassword.string.trim();
         let confirmPassword = this.signupConfirmPw.string.trim();
 
-        if (username === "" || password === ""){
-            alert("Cannot be empty");
+        if (username.length < 5){
+            UIManager.instance.openMessagePanel("Username must be 5 characters at least!", false);
+        }else if (password.length < 6){   
+            UIManager.instance.openMessagePanel("Password must be 6 characters at least!", false);
+        }
+        else if (username === "" || password === ""){
+            UIManager.instance.openMessagePanel("Info cannot be empty!", false);
         }else{
             if (password === confirmPassword){
                 GameDataManager.instance.signup(username, password);
             }else{
-                console.log("Password incorrect");
+                UIManager.instance.openMessagePanel("Password does not match!", false);
             }
         }
 

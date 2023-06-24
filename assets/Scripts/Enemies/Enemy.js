@@ -79,17 +79,14 @@ var Enemy = cc.Class({
     },
 
     onDespawn(){
-        if (this.isAlive){
-            if (this.isFreeze){
-                this.freeze.destroy();
-            }
-            GameDataManager.instance.coinAmount += this.coinValue;
-            GameManager.instance.gameplayUI.setCoinAmount(GameDataManager.instance.coinAmount);
-            LevelController.instance.increaseProgress();
-            GameManager.instance.gameplayUI.upgradeCurrentValue++;
-            this.node.destroy();
+        if (this.isFreeze){
+            this.freeze.destroy();
         }
-        
+        GameDataManager.instance.coinAmount += this.coinValue;
+        GameManager.instance.gameplayUI.setCoinAmount(GameDataManager.instance.coinAmount);
+        LevelController.instance.increaseProgress();
+        GameManager.instance.gameplayUI.upgradeCurrentValue++;
+        this.node.destroy();
     },
 
     setFreeze(freezeTime){
