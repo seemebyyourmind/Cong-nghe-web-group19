@@ -12,6 +12,7 @@ cc.Class({
     },
 
     clickHome(){
+        cc.director.resume();
         LevelController.instance.quitLevel();
         UIManager.instance.openUIMainMenu();
     }

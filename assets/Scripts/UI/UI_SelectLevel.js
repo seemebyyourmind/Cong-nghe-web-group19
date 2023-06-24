@@ -18,6 +18,11 @@ cc.Class({
 
     onEnable(){
         console.log(GameDataManager.instance.levelUnlocked);
+        for (var i = 0; i < this.levelBtn.length; i++){
+            this.levelBtn[i].interactable = false;
+            console.log(i);
+        }
+
         for (var i = 0; i < GameDataManager.instance.levelUnlocked; i++){
             this.levelBtn[i].interactable = true;
             console.log(i);
@@ -49,6 +54,7 @@ cc.Class({
 
     clickStartLevel(){
         this.levelPreviewPanel.active = false;
+        this.node.active = false;
         cc.director.loadScene('GameplayScene');
     },
 

@@ -6,15 +6,21 @@ const Castle = cc.Class({
     properties: {
         maxHP: 100,
         currentHP: 100,
+        isLose: cc.Boolean,
     },
 
-    onCollisionEnter: function (other, self) {   
+    start(){
+        this.isLose = false;
+    },
+
+    onCollisionEnter(other, self) {   
         if (other.node.group == 'Enemy'){
             let enemy = other.getComponent('Enemy');
             this.currentHP -= enemy.damage;
             enemy.onDespawn();
-            if (this.currentHP <= 0){
+            if (this.currentHP <= 0 && !this.isLose){
                 LevelController.instance.loseLevel();
+                this.isLose = true;
             }
         }
     },
