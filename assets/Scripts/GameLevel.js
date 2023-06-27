@@ -10,6 +10,7 @@ const GameLevel = cc.Class({
         maxProgress: cc.Float,
         levelBG: cc.SpriteFrame,
         levelName: cc.String,
+        enemyParent: cc.Node,
 
         spawning: [],
         spawnedAmount: [],
@@ -43,7 +44,7 @@ const GameLevel = cc.Class({
 
         let enemy = cc.instantiate(this.Waves[waveIndex].enemyPrefab);
         enemy.getComponent('Enemy').onSpawn(this.Waves[waveIndex].path);
-        enemy.parent = this.node;
+        enemy.parent = this.enemyParent;
 
         this.spawnedAmount[waveIndex]++;
         

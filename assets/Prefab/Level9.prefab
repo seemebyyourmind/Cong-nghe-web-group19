@@ -1782,6 +1782,7 @@
     "_enabled": true,
     "maxHP": 100,
     "currentHP": 100,
+    "isLose": false,
     "_id": ""
   },
   {
@@ -17914,6 +17915,9 @@
       "__uuid__": "b6981771-895d-445c-ae4a-2a0c5cd368e5"
     },
     "levelName": "Level 9",
+    "enemyParent": {
+      "__id__": 2
+    },
     "spawning": [],
     "spawnedAmount": [],
     "spawningID": [],

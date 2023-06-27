@@ -7,6 +7,7 @@ cc.Class({
     properties: {
         infoScreen: cc.Node,
         userScreen: cc.Node,
+        confirmPanel: cc.Node,
     },
 
     // LIFE-CYCLE CALLBACKS:
@@ -39,5 +40,20 @@ cc.Class({
     openInfoScreen(){
         this.infoScreen.active = true;
         this.userScreen.active = false;
+    },
+
+    clickLogout(){
+        this.confirmPanel.active = true;
+    },
+
+    clickYesBtn(){
+        this.confirmPanel.active = false;
+        this.openInfoScreen();
+    },
+
+    clickNoBtn(){
+        this.confirmPanel.active = false;
     }
+
+
 });

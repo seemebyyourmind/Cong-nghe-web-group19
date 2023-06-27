@@ -7379,6 +7379,7 @@
     "_enabled": true,
     "maxHP": 100,
     "currentHP": 100,
+    "isLose": false,
     "_id": ""
   },
   {
@@ -8280,6 +8281,9 @@
       "__uuid__": "3d71415c-0728-4a17-b43d-3f3c5cf452d5"
     },
     "levelName": "Level 3",
+    "enemyParent": {
+      "__id__": 2
+    },
     "spawning": [],
     "spawnedAmount": [],
     "spawningID": [],

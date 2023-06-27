@@ -32,6 +32,7 @@ const UI_Gameplay = cc.Class({
     // onLoad () {},
 
     onEnable () {
+        this.upgradeList = [];
         for (var i = 0; i < this.upgradePrefab.length; i++){
             var upgrade = cc.instantiate(this.upgradePrefab[i]).getComponent('Upgrade');
             this.upgradeList.push(upgrade);
@@ -65,6 +66,7 @@ const UI_Gameplay = cc.Class({
         this.upgradeButton[1].getComponent('UpgradeButton').setUpgrade(this.upgradeList[j]);
         this.upgradeButton[2].getComponent('UpgradeButton').setUpgrade(this.upgradeList[k]);
 
+        this.updateButton();
         this.refreshButton.interactable = GameDataManager.instance.coinAmount >= 50;
         
     },
